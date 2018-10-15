@@ -1,0 +1,122 @@
+<div id = "navbar">
+    <table id = "linktable">
+        <tr>
+            <td>
+                <a href = "editor.php">
+                    <img src = "symbols/editor.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "uploader/">
+                    <img src = "symbols/images.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "combiner/">
+                    <img src = "symbols/combiner.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "aligner/">
+                    <img src = "symbols/aligner.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "linker/">
+                <img src = "symbols/linkfeed.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "publisher/">
+                <img src = "symbols/meme2map.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "replicator/">
+                <img src = "symbols/copy.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "pages/">
+                <img src = "symbols/map.svg"/>
+                </a>
+            </td>
+
+        </tr>
+    </table>
+</div>
+
+<div id = "centerbox">
+ <img id = "bottomimage"/>
+ <div id = "leftfeed"></div>
+ <div id = "rightfeed"></div>
+</div>
+
+<div id = "actionbar">
+<!--
+slider bars for rotate and scale
+file uploader
+connect to remote feed
+image deleter
+page deleter
+newpage maker
+link deleter
+-->    
+</div>
+
+
+<style>
+
+#navbar{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:0px;
+    height:100px;
+    border-bottom:solid;
+    border-width:10px;
+    border-color:blue;
+    overflow:hidden;
+}
+#linktable{
+    border:solid;
+    margin:auto;
+    border-radius:10px;
+}
+#linktable img{
+    height:50px;
+}
+#centerbox{
+    position:absolute;
+    left:0px;
+    right:0px;
+    top:110px;
+    bottom:110px;
+}
+#bottomimage{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+#actionbar{
+    position:absolute;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    height:100px;
+    text-align:center;
+    border-top:solid;
+    border-color:blue;
+    border-width:10px;
+    background-color:white;
+}
+.button{
+    cursor:pointer;
+    border-radius:5px;
+    text-align:center;
+}
+.button:active{
+    background-color:yellow;
+}
+
+</style>
