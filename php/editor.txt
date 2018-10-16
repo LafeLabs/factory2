@@ -32,8 +32,6 @@ EGO DEATH:
 <div id = "filescroll">
 
     <div class = "html file">html/index.txt</div>
-    <div class = "html file">html/bars.txt</div>
-    <div class = "css file">css/bars.txt</div>
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/editor.txt</div>
     <div class = "php file">php/replicator.txt</div>
@@ -42,18 +40,6 @@ EGO DEATH:
     <div class = "php file">php/text2php.txt</div>
     <div class = "php file">php/dnagenerator.txt</div>
     <div class = "php file">php/copy.txt</div>
-    <div class = "php file">php/uploader.txt</div>
-    <div class = "html file">html/uploader.txt</div>
-    <div class = "php file">php/combiner.txt</div>
-    <div class = "html file">html/combiner.txt</div>
-    <div class = "php file">php/aligner.txt</div>
-    <div class = "html file">html/aligner.txt</div>
-    <div class = "php file">php/linker.txt</div>
-    <div class = "html file">html/linker.txt</div>
-    <div class = "php file">php/publisher.txt</div>
-    <div class = "html file">html/publisher.txt</div>
-    <div class = "php file">php/navigator.txt</div>
-    <div class = "html file">html/navigator.txt</div>
 
     <div class = "json file">json/dna.txt</div>
 </div>

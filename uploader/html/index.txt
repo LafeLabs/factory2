@@ -1,0 +1,29 @@
+<script>
+    document.getElementById("uploadform").style.display = "block";
+    document.getElementById("leftfeed").style.display = "block";
+    document.getElementById("deletebutton").style.display = "block";
+    document.getElementById("leftfeed").style.left = "30%";
+    
+        imagenames = document.getElementById("listdiv").innerHTML.split(",");
+
+    for(var index = 0;index < imagenames.length;index++){
+        if(imagenames[index].length> 2){
+            var newimg = document.createElement("IMG");
+            newimg.src = "images/" + imagenames[index];
+            document.getElementById("leftfeed").appendChild(newimg);
+        }
+    }
+    
+    document.getElementById("deletebutton").onclick = function(){
+        if (confirm("Really delete all images? Click OK to confirm, cancel to NOT delete ALL images.")) {
+            var httpc = new XMLHttpRequest();
+            var url = "deleteallimages.php";        
+            httpc.open("POST", url, true);
+            httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+            httpc.send();//
+            document.getElementById("leftfeed").innerHTML = "";
+            
+        }
+    }
+    
+</script>

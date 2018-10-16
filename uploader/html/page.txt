@@ -3,42 +3,42 @@
         <tr>
             <td>
                 <a href = "editor.php">
-                    <img src = "symbols/editor.svg"/>
+                    <img src = "../symbols/editor.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "uploader/">
-                    <img src = "symbols/images.svg"/>
+                <a href = "../uploader/">
+                    <img src = "../symbols/images.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "combiner/">
-                    <img src = "symbols/combiner.svg"/>
+                <a href = "../combiner/">
+                    <img src = "../symbols/combiner.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "aligner/">
-                    <img src = "symbols/aligner.svg"/>
+                <a href = "../aligner/">
+                    <img src = "../symbols/aligner.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "linker/">
-                <img src = "symbols/linkfeed.svg"/>
+                <a href = "../linker/">
+                <img src = "../symbols/linkfeed.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "publisher/">
-                <img src = "symbols/meme2map.svg"/>
+                <a href = "../publisher/">
+                <img src = "../symbols/meme2map.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "replicator/">
-                <img src = "symbols/copy.svg"/>
+                <a href = "../replicator/">
+                <img src = "../symbols/copy.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "pages/">
-                <img src = "symbols/map.svg"/>
+                <a href = "../pages/">
+                <img src = "../symbols/map.svg"/>
                 </a>
             </td>
 
@@ -52,12 +52,20 @@
  </div>
  <div class = "sidefeed" id = "leftfeed"></div>
  <div class = "sidefeed" id = "rightfeed"></div>
+ <table id = "imagelinktable"></table>
+
 </div>
 
 <div id = "actionbar">
  <div id = "scalebar" class = "slidebar">SCALE</div>
  <div id = "rotatebar" class = "slidebar">ROTATE</div>
- 
+ <table id = "inputtable">
+  <tr>
+    <td id = "inputlabel"></td>
+    <td><input id = "tableinput"/></td>
+  </tr>
+ </table>
+
  <form id = "uploadform" style = "margin-top:10px" action="upload.php" method="post" enctype="multipart/form-data">
     Select image to upload:
         <input type="file" name="fileToUpload" id="fileToUpload">
@@ -65,15 +73,9 @@
  </form>
 
 
- <img src = "symbols/meme2map.svg" id = "publishbutton" class= "button"/>
-<table id = "inputtable">
-    <tr>
-        <td id = "inputlabel"></td>
-        <td><input id = "tableinput"/></td>
-    </tr>
-</table>
-
- <img src = "symbols/delete.svg" id = "deletebutton" class= "button"/>
+ <img src = "../symbols/meme2map.svg" id = "publishbutton" class= "button"/>
+ <input id = "mapinput"/>
+ <img src = "../symbols/delete.svg" id = "deletebutton" class= "button"/>
 
 </div>
 
@@ -115,10 +117,16 @@ body{
     right:0px;
     bottom:0px;
 }
+.topimage{
+    position:absolute;
+    z-index:1;
+}
 #bottomimage{
     position:absolute;
     left:0px;
     top:0px;
+    border-right:solid;
+    border-bottom:solid;
     display:none;
 }
 .sidefeed{
@@ -140,6 +148,11 @@ body{
 }
 #rightfeed{
     right:5%;
+}
+#imagelinktable{
+    position:absolute;
+    left:50%;
+    top:150px;
 }
 #actionbar{
     position:absolute;
@@ -187,6 +200,12 @@ body{
     display:none;
 }
 #uploadform{
+    display:none;
+}
+#mapinput{
+    display:none;
+}
+#imagelinktable{
     display:none;
 }
 #inputtable{
