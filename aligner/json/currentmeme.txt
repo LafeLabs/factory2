@@ -3,22 +3,22 @@
     "topimages": [
         {
             "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0,
-            "yoverw": -0.001425661914460285,
+            "xoverw": 0.08655804480651731,
+            "yoverw": 0.0814663951120163,
+            "woverw": 0.5391038696537678,
+            "angle": 2.51327
+        },
+        {
+            "url": "http://localhost:8000/uploader/images/image4.PNG",
+            "xoverw": 0.17311608961303462,
+            "yoverw": 0.0814663951120163,
             "woverw": 0.0814663951120163,
             "angle": 0
         },
         {
             "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0.48065173116089616,
-            "yoverw": 0.2470468431771894,
-            "woverw": 0.0814663951120163,
-            "angle": 0
-        },
-        {
-            "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0.9103869653767821,
-            "yoverw": 0.0036659877800407333,
+            "xoverw": 0.25967413441955195,
+            "yoverw": 0.0814663951120163,
             "woverw": 0.0814663951120163,
             "angle": 0
         }

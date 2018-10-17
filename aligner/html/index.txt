@@ -5,6 +5,7 @@ imageslist = JSON.parse(document.getElementById("listdiv").innerHTML);
 document.getElementById("scalebar").style.display="block";
 document.getElementById("rotatebar").style.display="block";
 document.getElementById("bottomimage").style.display="block";
+document.getElementById("bottomsign").style.display="none";
 
 document.getElementById("bottomimage").style.height = (innerHeight - 234).toString() + "px";
 

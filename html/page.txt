@@ -1,4 +1,6 @@
 <div id = "navbar">
+    <img src = "../symbols/diamond.svg" id = "topdiamond"/>
+
     <table id = "linktable">
         <tr>
             <td>
@@ -77,6 +79,8 @@
  <input id = "mapinput"/>
  <img src = "../symbols/delete.svg" id = "deletebutton" class= "button"/>
 
+ <img src = "../symbols/mapfactory.svg" id = "bottomsign"/>
+
 </div>
 
 
@@ -99,6 +103,7 @@ body{
     border:solid;
     margin:auto;
     border-radius:10px;
+    margin-top:22px;
 }
 #linktable img{
     height:50px;
@@ -165,6 +170,7 @@ body{
     border-color:blue;
     border-width:10px;
     background-color:white;
+    z-index:-1;
 }
 .slidebar{
     position:absolute;
@@ -189,6 +195,7 @@ body{
     bottom:0px;
     width:60px;
     height:60px;
+    z-index:99999999;
     display:none;
 }
 #publishbutton{
@@ -219,5 +226,25 @@ body{
 .button:active{
     background-color:yellow;
 }
+#topdiamond{
+    position:absolute;
+    top:0px;
+    left:0px;
+    overflow:hidden;
+    height:20px;
+    width:100%;
+    z-index:-2;
+}
+#bottomsign{
+    position:absolute;
+    bottom:20px;
+    left:0px;
+    overflow:hidden;
+    height:20px;
+    width:100%;
+    z-index:-4;
+    opacity:0.5;    
+}
+
 </style>
 

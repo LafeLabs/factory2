@@ -1,4 +1,6 @@
 <div id = "navbar">
+    <img src = "symbols/diamond.svg" id = "topdiamond"/>
+
     <table id = "linktable">
         <tr>
             <td>
@@ -60,6 +62,7 @@
     <td><input id = "tableinput"/></td>
   </tr>
  </table>
+ <img src = "symbols/mapfactory.svg" id = "bottomsign"/>
 
 </div>
 <script>
@@ -120,6 +123,7 @@ body{
     border:solid;
     margin:auto;
     border-radius:10px;
+    margin-top:22px;
 }
 #linktable img{
     height:50px;
@@ -168,6 +172,7 @@ body{
     border-color:blue;
     border-width:10px;
     background-color:white;
+    z-index:-1;
 }
 
 #deletebutton{
@@ -205,6 +210,25 @@ body{
 }
 .button:active{
     background-color:yellow;
+}
+#topdiamond{
+    position:absolute;
+    top:0px;
+    left:0px;
+    overflow:hidden;
+    height:20px;
+    width:100%;
+    z-index:-2;
+}
+#bottomsign{
+    position:absolute;
+    bottom:20px;
+    left:0px;
+    overflow:hidden;
+    height:20px;
+    width:100%;
+    z-index:-4;
+    opacity:0.5;    
 }
 </style>
 

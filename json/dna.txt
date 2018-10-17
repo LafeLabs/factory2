@@ -30,11 +30,13 @@
 			"aligner.svg",
 			"combiner2.svg",
 			"delete.svg",
+			"diamond.svg",
 			"editor.svg",
 			"linker.svg",
 			"linkfeed.svg",
 			"linkfeed2.svg",
 			"map.svg",
+			"mapfactory.svg",
 			"replicator.svg",
 			"upload.svg"
 		]
