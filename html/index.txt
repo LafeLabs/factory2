@@ -4,6 +4,11 @@
     <table id = "linktable">
         <tr>
             <td>
+                <a href = "symbol/">
+                    <img src = "symbols/symbol.svg"/>
+                </a>
+            </td>
+            <td>
                 <a href = "editor.php">
                     <img src = "symbols/editor.svg"/>
                 </a>

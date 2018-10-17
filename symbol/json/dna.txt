@@ -47,6 +47,19 @@
 		]
 	},
 	{
+		"path":"icons",
+		"files":[
+			"editor.svg",
+			"factory.svg",
+			"shapes.svg",
+			"style.svg",
+			"svgfeed.svg",
+			"symbol.svg",
+			"tree.svg",
+			"vieweditor.svg"
+		]
+	},
+	{
 		"path":"javascript",
 		"files":[
 			"actions03xx.txt",
