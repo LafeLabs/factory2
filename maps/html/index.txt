@@ -130,7 +130,12 @@
         var httpc = new XMLHttpRequest();
         httpc.open("GET", "makenewmap.php?filename=" + newmapname, true);
         httpc.send();
-        
+        var newa = document.createElement("A");
+        newa.href = newmapname + "/replicator.php";
+        newa.innerHTML = newmapname + "/replicator.php";
+        var newli = document.createElement("LI");
+        newli.appendChild(newa);
+        document.getElementById("maplist").appendChild(newli);
     }
 </script>
 

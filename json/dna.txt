@@ -126,13 +126,15 @@
 		"files":[
 			"linkedmeme.txt"
 		]
-	}	{
+	},
+	{
 		"path":"maps/php",
 		"files":[
 			"editor.txt",
 			"fileloader.txt",
 			"filesaver.txt",
 			"index.txt",
+			"makenewmap.txt",
 			"text2php.txt"
 		]
 	},

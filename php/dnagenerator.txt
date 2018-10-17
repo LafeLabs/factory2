@@ -67,6 +67,7 @@ $finalstring .= ",\n";
 $finalstring .= getfiles("linker/php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("linker/json");
+$finalstring .= ",\n";
 
 $finalstring .= getfiles("maps/php");
 $finalstring .= ",\n";
