@@ -38,6 +38,7 @@
 			"map.svg",
 			"mapfactory.svg",
 			"replicator.svg",
+			"symbol.svg",
 			"upload.svg"
 		]
 	},
@@ -167,7 +168,7 @@
     {
         "path":"symbol",
         "files":[
-            "replicator.txt"
+            "replicator.php"
         ]
     }
 ]
