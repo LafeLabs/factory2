@@ -64,31 +64,13 @@ $finalstring .= ",\n";
 $finalstring .= getfiles("linkfeed/html");
 $finalstring .= ",\n";
 
-$finalstring .= getfiles("map/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("map/html");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("map/marker/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("map/marker/html");
-$finalstring .= ",\n";
-
-
-$finalstring .= getfiles("textfeed/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("textfeed/json");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("linkfeed/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("linkfeed/json");
-$finalstring .= ",\n";
-
 $finalstring .= getfiles("linker/php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("linker/json");
 
+$finalstring .= getfiles("maps/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("maps/html");
 
 $finalstring .= "\n]";
 

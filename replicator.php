@@ -17,7 +17,7 @@
         mkdir("linkfeed/json");
     mkdir("linker");
         mkdir("linker/json");
-
+    mkdir("maps");
 
     foreach($dna as $dirs){
         mkdir($dirs->path);

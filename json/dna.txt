@@ -2,7 +2,6 @@
 	{
 		"path":"php",
 		"files":[
-			"copy.txt",
 			"dnagenerator.txt",
 			"editor.txt",
 			"fileloader.txt",
@@ -21,118 +20,47 @@
 	},
 	{
 		"path":"json",
-		"files":
-		]
-	},
-	{
-		"path":"factory_symbols",
-		"files":
-		]
-	},
-	{
-		"path":"page/php",
-		"files":
-		]
-	},
-	{
-		"path":"page/html",
-		"files":
-		]
-	},
-	{
-		"path":"deck/php",
-		"files":
-		]
-	},
-	{
-		"path":"deck/html",
-		"files":
-		]
-	},
-	{
-		"path":"scroll/php",
-		"files":
-		]
-	},
-	{
-		"path":"scroll/html",
-		"files":
-		]
-	},
-	{
-		"path":"map/php",
-		"files":
-		]
-	},
-	{
-		"path":"map/html",
-		"files":
-		]
-	},
-	{
-		"path":"map/marker/php",
-		"files":
-		]
-	},
-	{
-		"path":"map/marker/html",
-		"files":
-		]
-	},
-	{
-		"path":"textfeed/php",
-		"files":
-		]
-	},
-	{
-		"path":"textfeed/json",
-		"files":
-		]
-	},
-	{
-		"path":"linkfeed/php",
 		"files":[
+			"dna.txt"
+		]
+	},
+	{
+		"path":"symbols",
+		"files":[
+			"aligner.svg",
+			"combiner2.svg",
+			"delete.svg",
+			"editor.svg",
+			"feed.svg",
+			"file.svg",
+			"linker.svg",
+			"linkfeed.svg",
+			"linkfeed2.svg",
+			"map.svg",
+			"mapalign.svg",
+			"maplist.svg",
+			"marker.svg",
+			"page.svg",
+			"replicator.svg",
+			"upload.svg"
+		]
+	},
+	{
+		"path":"uploader/php",
+		"files":[
+			"deleteallimages.txt",
 			"editor.txt",
 			"fileloader.txt",
 			"filesaver.txt",
 			"index.txt",
-			"text2php.txt"
+			"text2php.txt",
+			"upload.txt"
 		]
 	},
 	{
-		"path":"linkfeed/json",
+		"path":"uploader/html",
 		"files":[
-			"linklist.txt"
-		]
-	},
-	{
-		"path":"symbol/php",
-		"files":
-		]
-	},
-	{
-		"path":"symbol/html",
-		"files":
-		]
-	},
-	{
-		"path":"symbol/css",
-		"files":
-		]
-	},
-	{
-		"path":"symbol/javascript",
-		"files":
-		]
-	},
-	{
-		"path":"symbol/bytecode",
-		"files":
-		]
-	},
-	{
-		"path":"symbol/json",
-		"files":
+			"index.txt"
 		]
 	},
 	{
@@ -152,12 +80,6 @@
 		]
 	},
 	{
-		"path":"combiner/json",
-		"files":[
-			"imagelist.txt"
-		]
-	},
-	{
 		"path":"aligner/php",
 		"files":[
 			"editor.txt",
@@ -174,18 +96,50 @@
 		]
 	},
 	{
-		"path":"images/php",
-		"files":
+		"path":"linkfeed/php",
+		"files":[
+			"editor.txt",
+			"fileloader.txt",
+			"filesaver.txt",
+			"index.txt",
+			"text2php.txt"
 		]
 	},
 	{
-		"path":"images/html",
-		"files":
+		"path":"linkfeed/html",
+		"files":[
+			"index.txt"
 		]
 	},
 	{
-		"path":"images/json",
-		"files":
+		"path":"linker/php",
+		"files":[
+			"editor.txt",
+			"fileloader.txt",
+			"filesaver.txt",
+			"index.txt",
+			"text2php.txt"
+		]
+	},
+	{
+		"path":"linker/json",
+		"files":[
+			"linkedmeme.txt"
+		]
+	}	{
+		"path":"maps/php",
+		"files":[
+			"editor.txt",
+			"fileloader.txt",
+			"filesaver.txt",
+			"index.txt",
+			"text2php.txt"
+		]
+	},
+	{
+		"path":"maps/html",
+		"files":[
+			"index.txt"
 		]
 	}
 ]
