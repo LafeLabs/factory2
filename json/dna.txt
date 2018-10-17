@@ -31,16 +31,10 @@
 			"combiner2.svg",
 			"delete.svg",
 			"editor.svg",
-			"feed.svg",
-			"file.svg",
 			"linker.svg",
 			"linkfeed.svg",
 			"linkfeed2.svg",
 			"map.svg",
-			"mapalign.svg",
-			"maplist.svg",
-			"marker.svg",
-			"page.svg",
 			"replicator.svg",
 			"upload.svg"
 		]

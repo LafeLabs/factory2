@@ -23,7 +23,7 @@
             </td>
             <td>
                 <a href = "../linkfeed/">
-                <img src = "../symbols/linkfeed.svg"/>
+                <img src = "../symbols/linkfeed2.svg"/>
                 </a>
             </td>
             <td>
@@ -58,7 +58,9 @@
 
  </div>
  <div class = "sidefeed" id = "rightfeed">
-     
+     <p>
+         <a href = "../">../</a>
+     </p>
 <h2>How to make your own Watershed Factory</h2>
 
 <p>To create your own instance of this software you need to create a free web hosting account, upload one program, then run that program and the code will all be copied over.  Then you can custommize it as you see fit, and show others how to replicate it.</p>
@@ -112,6 +114,18 @@
     document.getElementById("rightfeed").style.display = "block";
     document.getElementById("inputtable").style.display = "block";
     document.getElementById("inputlabel").innerHTML = "Name of new sub map:";
+
+    dirarray = document.getElementById("listdiv").innerHTML.split(",");
+    for(var index = 0;index < divarray.length;index++){
+        if(divarray[index].length>0){
+            var newa = document.createElement("A");
+            newa.href = divarray[index] + "/";
+            newa.innerHTML = divarray[index] + "/";
+            var newli = document.createElement("LI");
+            newli.appendChild(newa);
+            document.getElementById("maplist").appendChild(newli);
+        }
+    }
 
     currentFile = "../php/replicator.txt";
     var httpc = new XMLHttpRequest();
