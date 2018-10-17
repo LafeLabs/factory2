@@ -1,6 +1,6 @@
 [
-    "http://localhost:8000/uploader/images/image1.png",
-    "http://localhost:8000/uploader/images/image2.PNG",
-    "http://localhost:8000/uploader/images/image2.PNG",
-    "http://localhost:8000/uploader/images/image2.PNG"
+    "http://localhost:8000/uploader/images/image3.PNG",
+    "http://localhost:8000/uploader/images/image4.PNG",
+    "http://localhost:8000/uploader/images/image4.PNG",
+    "http://localhost:8000/uploader/images/image4.PNG"
 ]

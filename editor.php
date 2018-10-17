@@ -32,6 +32,7 @@ EGO DEATH:
 <div id = "filescroll">
 
     <div class = "html file">html/index.txt</div>
+    <div class = "html file">html/page.txt</div>
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/editor.txt</div>
     <div class = "php file">php/replicator.txt</div>

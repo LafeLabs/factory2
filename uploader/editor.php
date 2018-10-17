@@ -23,16 +23,14 @@ EGO DEATH:
 <body>
 <div id = "linkscroll">
     <a href = "text2php.php">text2php.php</a>
-    <a href = "copy.php">copy.php</a>
     <a href = "index.php">index.php</a>
-    <a href = "dnagenerator.php">dnagenerator.php</a>
+
 </div>
 <div id = "namediv"></div>
 <div id="maineditor" contenteditable="true" spellcheck="false"></div>
 <div id = "filescroll">
 
     <div class = "html file">html/index.txt</div>
-    <div class = "html file">html/page.txt</div>
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/editor.txt</div>
     <div class = "php file">php/filesaver.txt</div>
@@ -41,7 +39,6 @@ EGO DEATH:
     <div class = "php file">php/upload.txt</div>
     <div class = "php file">php/deleteallimages.txt</div>
 
-    <div class = "json file">json/dna.txt</div>
 </div>
 
 <script>

@@ -1,0 +1,5 @@
+[
+    "http://lafelabs.org/factory/combiner/",
+    "n",
+    "http://trashrobot.org/"
+]

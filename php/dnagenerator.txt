@@ -41,22 +41,27 @@ $finalstring .= ",\n";
 $finalstring .= getfiles("json");
 $finalstring .= ",\n";
 
-$finalstring .= getALLfiles("factory_symbols");
+$finalstring .= getALLfiles("symbols");
 $finalstring .= ",\n";
 
-$finalstring .= getfiles("page/php");
+$finalstring .= getfiles("uploader/php");
 $finalstring .= ",\n";
-$finalstring .= getfiles("page/html");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("deck/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("deck/html");
+$finalstring .= getfiles("uploader/html");
 $finalstring .= ",\n";
 
-$finalstring .= getfiles("scroll/php");
+$finalstring .= getfiles("combiner/php");
 $finalstring .= ",\n";
-$finalstring .= getfiles("scroll/html");
+$finalstring .= getfiles("combiner/html");
+$finalstring .= ",\n";
+
+$finalstring .= getfiles("aligner/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("aligner/html");
+$finalstring .= ",\n";
+
+$finalstring .= getfiles("linkfeed/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("linkfeed/html");
 $finalstring .= ",\n";
 
 $finalstring .= getfiles("map/php");
@@ -80,37 +85,9 @@ $finalstring .= ",\n";
 $finalstring .= getfiles("linkfeed/json");
 $finalstring .= ",\n";
 
-
-$finalstring .= getfiles("symbol/php");
+$finalstring .= getfiles("linker/php");
 $finalstring .= ",\n";
-$finalstring .= getfiles("symbol/html");
-$finalstring .= ",\n";
-$finalstring .= getfiles("symbol/css");
-$finalstring .= ",\n";
-$finalstring .= getfiles("symbol/javascript");
-$finalstring .= ",\n";
-$finalstring .= getfiles("symbol/bytecode");
-$finalstring .= ",\n";
-$finalstring .= getfiles("symbol/json");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("combiner/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("combiner/html");
-$finalstring .= ",\n";
-$finalstring .= getfiles("combiner/json");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("aligner/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("aligner/html");
-$finalstring .= ",\n";
-
-$finalstring .= getfiles("images/php");
-$finalstring .= ",\n";
-$finalstring .= getfiles("images/html");
-$finalstring .= ",\n";
-$finalstring .= getfiles("images/json");
+$finalstring .= getfiles("linker/json");
 
 
 $finalstring .= "\n]";

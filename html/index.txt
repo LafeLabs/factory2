@@ -8,12 +8,12 @@
             </td>
             <td>
                 <a href = "uploader/">
-                    <img src = "symbols/images.svg"/>
+                    <img src = "symbols/upload.svg"/>
                 </a>
             </td>
             <td>
                 <a href = "combiner/">
-                    <img src = "symbols/combiner.svg"/>
+                    <img src = "symbols/combiner2.svg"/>
                 </a>
             </td>
             <td>
@@ -22,23 +22,23 @@
                 </a>
             </td>
             <td>
-                <a href = "linker/">
+                <a href = "linkfeed/">
                 <img src = "symbols/linkfeed.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "publisher/">
-                <img src = "symbols/meme2map.svg"/>
+                <a href = "linker/">
+                <img src = "symbols/linker.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "replicator/">
-                <img src = "symbols/copy.svg"/>
-                </a>
-            </td>
-            <td>
-                <a href = "pages/">
+                <a href = "index.php">
                 <img src = "symbols/map.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "copy.php">
+                <img src = "symbols/replicator.svg"/>
                 </a>
             </td>
 
@@ -50,33 +50,56 @@
  <div id = "memebox">
   <img id = "bottomimage"/>
  </div>
- <div class = "sidefeed" id = "leftfeed"></div>
- <div class = "sidefeed" id = "rightfeed"></div>
 </div>
 
 <div id = "actionbar">
- <div id = "scalebar" class = "slidebar">SCALE</div>
- <div id = "rotatebar" class = "slidebar">ROTATE</div>
- 
- <form id = "uploadform" style = "margin-top:10px" action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-        <input type="file" name="fileToUpload" id="fileToUpload">
-        <input type="submit" value="Upload Image" name="submit">
- </form>
 
-
- <img src = "symbols/meme2map.svg" id = "publishbutton" class= "button"/>
-<table id = "inputtable">
-    <tr>
-        <td id = "inputlabel"></td>
-        <td><input id = "tableinput"/></td>
-    </tr>
-</table>
-
- <img src = "symbols/delete.svg" id = "deletebutton" class= "button"/>
+ <table id = "inputtable">
+  <tr>
+    <td id = "inputlabel"></td>
+    <td><input id = "tableinput"/></td>
+  </tr>
+ </table>
 
 </div>
+<script>
+meme= JSON.parse(document.getElementById("datadiv").innerHTML);
 
+document.getElementById("bottomimage").width = innerWidth;
+document.getElementById("bottomimage").src = meme.imgurl;
+document.getElementById("bottomimage").onload = function(){
+    aspectRatio = this.width/this.height;
+    if(this.height > (innerHeight - 220)){
+        this.style.height = (innerHeight - 220).toString() + "px";
+        this.style.width = (aspectRatio*(innerHeight - 220)).toString() + "px";
+        imageWidth = aspectRatio*(innerHeight - 220);
+    }
+    else{
+        imageWidth = innerWidth;
+    }
+    init();
+}
+function init(){
+    for(var index = 0;index < meme.topimages.length;index++){
+        var newa = document.createElement("A");
+        var newimg = document.createElement("IMG");
+        document.getElementById("memebox").appendChild(newa);
+        newa.href = meme.topimages[index].href;
+        newa.appendChild(newimg);
+        newa.className = "boxlink";
+        newimg.className = "topimage";
+        newimg.src = meme.topimages[index].url;
+        newa.style.width = (meme.topimages[index].woverw*imageWidth).toString() + "px";
+        newa.style.left = (meme.topimages[index].xoverw*imageWidth).toString() + "px";
+        newa.style.top = (meme.topimages[index].yoverw*imageWidth).toString() + "px";
+        newa.style.transform = "rotate(" + (meme.topimages[index].angle).toString() + "deg)";
+        newimg.onload = function(){
+             this.parentElement.style.height = (this.height).toString() + "px";
+        }
+        
+    }
+}
+</script>
 
 <style>
 body{
@@ -115,32 +138,25 @@ body{
     right:0px;
     bottom:0px;
 }
+.topimage{
+    position:absolute;
+    z-index:1;
+    left:0px;
+    top:0px;
+    width:100%;
+}
+.boxlink{
+    position:absolute;
+    z-index:1;
+}
 #bottomimage{
     position:absolute;
     left:0px;
     top:0px;
-    display:none;
+    border-right:solid;
+    border-bottom:solid;
 }
-.sidefeed{
-    width:40%;
-    position:absolute;
-    top:0px;
-    bottom:0px;
-    overflow:scroll;
-    border:solid;
-    display:none;
-}
-.sidefeed img{
-    display:block;
-    width:75%;
-    margin:auto;
-}
-#leftfeed{
-    left:5%;
-}
-#rightfeed{
-    right:5%;
-}
+
 #actionbar{
     position:absolute;
     left:0px;
@@ -153,23 +169,7 @@ body{
     border-width:10px;
     background-color:white;
 }
-.slidebar{
-    position:absolute;
-    left:0px;
-    right:0px;
-    height:50px;
-    text-align:center;
-    border:solid;
-    font-size:40px;
-    overflow:hidden;
-    display:none;
-}
-#scalebar{
-    bottom:50px;
-}
-#rotatebar{
-    bottom:0px;
-}
+
 #deletebutton{
     position:absolute;
     right:0px;
@@ -187,6 +187,12 @@ body{
     display:none;
 }
 #uploadform{
+    display:none;
+}
+#mapinput{
+    display:none;
+}
+#imagelinktable{
     display:none;
 }
 #inputtable{

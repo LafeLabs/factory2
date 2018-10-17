@@ -43,20 +43,17 @@ EGO DEATH:
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+
 </head>
 <body>
-<div id = "listdiv" style = "display:none"><?php
+<div id = "memedatadiv" style = "display:none"><?php
 
-$files = scandir(getcwd()."/images");
-$listtext = "";
-foreach(array_reverse($files) as $value){
-    if($value != "." && $value != ".."){
-        $listtext .= $value.",";
-    }
-}
+echo file_get_contents("../aligner/json/currentmeme.txt");
 
-echo $listtext;
+?></div>
+<div id = "linkdatadiv" style = "display:none"><?php
 
+echo file_get_contents("json/linklist.txt");
 
 ?></div>
 <?php

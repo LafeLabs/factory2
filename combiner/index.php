@@ -60,7 +60,7 @@ echo $listtext;
 
 ?></div>
 <?php
-    echo file_get_contents("../uploader/html/page.txt");
+    echo file_get_contents("../html/page.txt");
     echo "\n";
     echo file_get_contents("html/index.txt");
 ?>

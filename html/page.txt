@@ -8,12 +8,12 @@
             </td>
             <td>
                 <a href = "../uploader/">
-                    <img src = "../symbols/images.svg"/>
+                    <img src = "../symbols/upload.svg"/>
                 </a>
             </td>
             <td>
                 <a href = "../combiner/">
-                    <img src = "../symbols/combiner.svg"/>
+                    <img src = "../symbols/combiner2.svg"/>
                 </a>
             </td>
             <td>
@@ -22,23 +22,23 @@
                 </a>
             </td>
             <td>
-                <a href = "../linker/">
+                <a href = "../linkfeed/">
                 <img src = "../symbols/linkfeed.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "../publisher/">
-                <img src = "../symbols/meme2map.svg"/>
+                <a href = "../linker/">
+                <img src = "../symbols/linker.svg"/>
                 </a>
             </td>
             <td>
-                <a href = "../replicator/">
-                <img src = "../symbols/copy.svg"/>
-                </a>
-            </td>
-            <td>
-                <a href = "../pages/">
+                <a href = "../">
                 <img src = "../symbols/map.svg"/>
+                </a>
+            </td>
+            <td>
+                <a href = "../copy.php">
+                <img src = "../symbols/replicator.svg"/>
                 </a>
             </td>
 

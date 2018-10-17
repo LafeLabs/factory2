@@ -36,7 +36,7 @@ EGO DEATH:
     <div class = "php file">php/fileloader.txt</div>
     <div class = "php file">php/text2php.txt</div>
 
-    <div class = "json file">json/linkedmeme.txt</div>
+    <div class = "json file">json/linklist.txt</div>
 </div>
 
 <script>

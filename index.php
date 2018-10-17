@@ -2,9 +2,15 @@
 <html  lang="en">
 <head>
 <meta charset="utf-8"> 
-<title>Index</title>
+<title>Map Factory</title>
 <!-- 
 PUBLIC DOMAIN, NO COPYRIGHTS, NO PATENTS.
+
+note that "map" has a broader meaning than just geographic maps like google maps or yahoo or whatever, the wikipedia definition starts like this:
+
+"A map is a symbolic depiction emphasizing relationships between elements of some space, such as objects, regions, or themes."
+
+This is the goal of this project, to make a factory which creates maps in this generalized definition.  
 
 _9_LAWS_OF_GEOMETRON_:
 
@@ -40,11 +46,13 @@ EGO DEATH:
 	});//			MathJax.Hub.Typeset();//tell Mathjax to update the math
 </script>
 -->
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
+<div id = "datadiv" style = "display:none"><?php
+
+echo file_get_contents("linker/json/linkedmeme.txt");
+
+?></div>
 <?php
     echo file_get_contents("html/index.txt");
 ?>

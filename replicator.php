@@ -1,36 +1,23 @@
 <?php
 
-    $url = "https://raw.githubusercontent.com/LafeLabs/factory/master/json/dna.txt";
+    $url = "https://raw.githubusercontent.com/LafeLabs/factory2/master/json/dna.txt";
     $dnaraw = file_get_contents($url);
     $dna =json_decode($dnaraw);
     $baseurl = explode("json",$url)[0];
 
     //sources
-    mkdir("page");
-        mkdir("page/pages");
-    mkdir("deck");
-        mkdir("deck/decks");
-    mkdir("scroll");
-        mkdir("scroll/scrolls");
-    mkdir("map");
-        mkdir("map/maps");
-        mkdir("map/json");
-        mkdir("map/marker");
-            mkdir("map/marker/json");
-
-    mkdir("factory_symbols");
-    mkdir("textfeed");
-        mkdir("textfeed/html");
-    mkdir("linkfeed");
-        mkdir("linkfeed/html");
-    mkdir("symbol");
-        mkdir("symbol/svg");
-        mkdir("symbol/symbols");
-    mkdir("images");
-        mkdir("images/images");
+    mkdir("symbols");
+    mkdir("uploader");
+        mkdir("uploader/images");
     mkdir("combiner");
+        mkdir("combiner/json");
     mkdir("aligner");
-        mkdir("aligner/memes");
+        mkdir("aligner/json");
+    mkdir("linkfeed");
+        mkdir("linkfeed/json");
+    mkdir("linker");
+        mkdir("linker/json");
+
 
     foreach($dna as $dirs){
         mkdir($dirs->path);

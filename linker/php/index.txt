@@ -2,7 +2,7 @@
 <html  lang="en">
 <head>
 <meta charset="utf-8"> 
-<title>Index</title>
+<title>Linker</title>
 <!-- 
 PUBLIC DOMAIN, NO COPYRIGHTS, NO PATENTS.
 
@@ -51,13 +51,13 @@ EGO DEATH:
 echo file_get_contents("../aligner/json/currentmeme.txt");
 
 ?></div>
-<div id = "memedatadiv" style = "display:none"><?php
+<div id = "linkdatadiv" style = "display:none"><?php
 
-echo file_get_contents("json/linklist.txt");
+echo file_get_contents("../linkfeed/json/linklist.txt");
 
 ?></div>
 <?php
-    echo file_get_contents("../uploader/html/page.txt");
+    echo file_get_contents("../html/page.txt");
     echo "\n";
     echo file_get_contents("html/index.txt");
 ?>
