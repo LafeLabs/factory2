@@ -58,6 +58,7 @@
         DO NOT PUT ANYTHING SECRET, PROPRIETARY, PERSONAL, CLASSIFIED, PRIVATE OR OF ANY MONETARY VALUE ON HERE!  This system is based on a "disposable server" model.  That is, on the assumption that the number of web servers is already greater than the number of human minds, and that each server can have thousands of instances of software like this, meaning the number of instances is many thousands per human mind for all of humanity.  This changes how we think of information and ultimately renders moot what is known as "cybersecurity".  However for the time being, as you have information which does need to be protected, keep it off this network or expect it to be copied and destroyed.  
     </li>
 </ol>
+
 </div>
 
 <style>

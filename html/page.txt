@@ -37,7 +37,7 @@
                 </a>
             </td>
             <td>
-                <a href = "../copy.php">
+                <a href = "../maps/">
                 <img src = "../symbols/replicator.svg"/>
                 </a>
             </td>

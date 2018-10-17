@@ -42,27 +42,21 @@ EGO DEATH:
 </script>
 -->
 
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 <body>
 <div id = "listdiv" style = "display:none"><?php
 
-$files = scandir(getcwd()."/../uploader/images");
+$files = scandir(getcwd());
 $listtext = "";
-foreach(array_reverse($files) as $value){
-    if($value != "." && $value != ".."){
+foreach($files as $value){
+    if($value != "html" && $value != "php" && $value != "." && $value != ".." && is_dir($value)){
         $listtext .= $value.",";
     }
 }
-
 echo $listtext;
-
 
 ?></div>
 <?php
-    echo file_get_contents("../html/page.txt");
-    echo "\n";
     echo file_get_contents("html/index.txt");
 ?>
 </body>

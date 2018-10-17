@@ -8,7 +8,7 @@
     document.getElementById("leftfeed").style.display = "block";
     document.getElementById("rightfeed").style.display = "block";
     document.getElementById("inputtable").style.display = "block";
-    document.getElementById("inputlabel").innerHTML = "External Vector Graphics Feed:"
+    document.getElementById("inputlabel").innerHTML = "External Vector Graphics Feed:";
 
     imagelist  = document.getElementById("listdiv").innerHTML.split(",");
     for(var index = 0;index < imagelist.length;index++){
