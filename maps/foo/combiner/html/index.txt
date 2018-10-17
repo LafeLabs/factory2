@@ -1,0 +1,48 @@
+<style>
+    .sidefeed img{
+        cursor:pointer;
+    }
+</style>
+<script>
+
+    document.getElementById("leftfeed").style.display = "block";
+    document.getElementById("rightfeed").style.display = "block";
+    document.getElementById("inputtable").style.display = "block";
+    document.getElementById("inputlabel").innerHTML = "External Vector Graphics Feed:";
+
+    imagelist  = document.getElementById("listdiv").innerHTML.split(",");
+    for(var index = 0;index < imagelist.length;index++){
+        if(imagelist[index].length > 1){
+            var newimg = document.createElement("IMG");
+            newimg.src = "../uploader/images/" + imagelist[index];
+            document.getElementById("leftfeed").appendChild(newimg);
+            newimg.onclick = function(){
+                var newimg2 = document.createElement("img");
+                newimg2.src = this.src;
+                document.getElementById("rightfeed").appendChild(newimg2);
+                redraw();
+                newimg2.onclick = function(){
+                    document.getElementById("rightfeed").removeChild(this);
+                    redraw();
+                }
+            }
+        }
+    }   
+    
+    function redraw(){
+        currentFile = "json/imagelist.txt";
+        imagelist = [];
+        outimages = document.getElementById("rightfeed").getElementsByTagName("IMG");
+        for(var index = 0;index < outimages.length;index++){
+            imagelist.push(outimages[index].src);
+        }
+        data = encodeURIComponent(JSON.stringify(imagelist,null, "    "));
+        var httpc = new XMLHttpRequest();
+        var url = "filesaver.php";        
+        httpc.open("POST", url, true);
+        httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+        httpc.send("data="+data+"&filename="+currentFile);//send text to filesaver.php
+
+    }
+    
+</script>

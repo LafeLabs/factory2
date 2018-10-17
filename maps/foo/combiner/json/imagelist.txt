@@ -1,0 +1,5 @@
+[
+    "http://localhost:8000/maps/foo/uploader/images/image1.PNG",
+    "http://localhost:8000/maps/foo/uploader/images/image2.PNG",
+    "http://localhost:8000/maps/foo/uploader/images/image2.PNG"
+]

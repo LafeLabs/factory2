@@ -135,8 +135,7 @@
 	},
 	{
 		"path":"linker/html",
-		"files":[
-			"index.txt"
+		"files":
 		]
 	},
 	{

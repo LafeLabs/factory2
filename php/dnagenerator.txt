@@ -51,20 +51,28 @@ $finalstring .= ",\n";
 
 $finalstring .= getfiles("combiner/php");
 $finalstring .= ",\n";
+$finalstring .= getfiles("combiner/json");
+$finalstring .= ",\n";
 $finalstring .= getfiles("combiner/html");
 $finalstring .= ",\n";
 
 $finalstring .= getfiles("aligner/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("aligner/json");
 $finalstring .= ",\n";
 $finalstring .= getfiles("aligner/html");
 $finalstring .= ",\n";
 
 $finalstring .= getfiles("linkfeed/php");
 $finalstring .= ",\n";
+$finalstring .= getfiles("linkfeed/json");
+$finalstring .= ",\n";
 $finalstring .= getfiles("linkfeed/html");
 $finalstring .= ",\n";
 
 $finalstring .= getfiles("linker/php");
+$finalstring .= ",\n";
+$finalstring .= getfiles("linker/html");
 $finalstring .= ",\n";
 $finalstring .= getfiles("linker/json");
 $finalstring .= ",\n";

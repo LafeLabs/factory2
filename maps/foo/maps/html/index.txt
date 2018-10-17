@@ -117,11 +117,11 @@
     document.getElementById("inputlabel").innerHTML = "Name of new sub map:";
 
     dirarray = document.getElementById("listdiv").innerHTML.split(",");
-    for(var index = 0;index < dirarray.length;index++){
-        if(dirarray[index].length>0){
+    for(var index = 0;index < divarray.length;index++){
+        if(divarray[index].length>0){
             var newa = document.createElement("A");
-            newa.href = dirarray[index] + "/";
-            newa.innerHTML = dirarray[index] + "/";
+            newa.href = divarray[index] + "/";
+            newa.innerHTML = divarray[index] + "/";
             var newli = document.createElement("LI");
             newli.appendChild(newa);
             document.getElementById("maplist").appendChild(newli);
