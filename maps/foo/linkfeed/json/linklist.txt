@@ -1,4 +1,0 @@
-[
-    "https://www.nist.gov/",
-    "https://www.colorado.edu/"
-]
