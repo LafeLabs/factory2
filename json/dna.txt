@@ -163,5 +163,11 @@
 		"files":[
 			"index.txt"
 		]
-	}
+	},
+    {
+        "path":"symbol",
+        "files":[
+            "replicator.txt"
+        ]
+    }
 ]
