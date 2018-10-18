@@ -1,5 +1,6 @@
 [
+    "http://lafelabs.org/factory/symbol/svg/svg1539575918.svg",
     "http://localhost:8000/uploader/images/image2.PNG",
-    "http://localhost:8000/symbol/svg/svg1539822302.svg",
-    "http://localhost:8000/symbol/svg/svg1539822302.svg"
+    "http://lafelabs.org/factory/symbol/svg/svg1539177823.svg",
+    "http://localhost:8000/uploader/images/image1.png"
 ]

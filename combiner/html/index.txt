@@ -72,7 +72,18 @@
         //use fileloader.php to grab remote list file
         //http://lafelabs.org/factory/symbol/   
         //example: http://lafelabs.org/factory/symbol/  svg/list.txt
-        currentFile = this.value + "svg/list.txt";
+        
+        //need to see if there is a ? in the url
+        subdir = false;
+        if(this.value.split("index.php?path=").length > 1){
+            currentFile = this.value.split("index.php?path=")[0] + "symbols/" + this.value.split("index.php?path=")[1] + "svg/list.txt";
+            symboldir = this.value.split("index.php?path=")[0] + "symbols/" + this.value.split("index.php?path=")[1] + "svg/";
+            subdir = true;
+        }
+        else{
+            currentFile = this.value + "svg/list.txt";
+            symboldir = this.value + "svg/";
+        }
         var httpc = new XMLHttpRequest();
         httpc.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
@@ -81,8 +92,7 @@
                 for(var index = 0;index < symbollist.length;index++){
                     if(symbollist[index].length > 1){
                     var newimg = document.createElement("IMG");
-                    newimg.src = document.getElementById("tableinput").value + "svg/" + symbollist[index];
-                    
+                    newimg.src = symboldir + symbollist[index];     
                     var localimglist = document.getElementById("leftfeed").getElementsByTagName("IMG");
                     document.getElementById("leftfeed").insertBefore(newimg,localimglist[0]);
     //                document.getElementById("imagesfeed").appendChild(newimg);
