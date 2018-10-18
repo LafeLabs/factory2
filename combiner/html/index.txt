@@ -67,4 +67,45 @@
 
     }
     
+    
+    document.getElementById("tableinput").onchange = function(){
+        //use fileloader.php to grab remote list file
+        //http://lafelabs.org/factory/symbol/   
+        //example: http://lafelabs.org/factory/symbol/  svg/list.txt
+        currentFile = this.value + "svg/list.txt";
+        var httpc = new XMLHttpRequest();
+        httpc.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                filedata = this.responseText;
+                symbollist  = filedata.split(",");
+                for(var index = 0;index < symbollist.length;index++){
+                    if(symbollist[index].length > 1){
+                    var newimg = document.createElement("IMG");
+                    newimg.src = document.getElementById("tableinput").value + "svg/" + symbollist[index];
+                    
+                    var localimglist = document.getElementById("leftfeed").getElementsByTagName("IMG");
+                    document.getElementById("leftfeed").insertBefore(newimg,localimglist[0]);
+    //                document.getElementById("imagesfeed").appendChild(newimg);
+                    
+                    
+                    newimg.onclick = function(){
+                        var newimg2 = document.createElement("img");
+                        newimg2.src = this.src;
+                        document.getElementById("rightfeed").appendChild(newimg2);
+                        redraw();
+                        newimg2.onclick = function(){
+                            document.getElementById("rightfeed").removeChild(this);
+                            redraw();
+                        }
+                
+                    }
+
+                    }
+                }   
+    
+            }
+        };
+        httpc.open("GET", "fileloader.php?filename=" + currentFile, true);
+        httpc.send();
+    }
 </script>
