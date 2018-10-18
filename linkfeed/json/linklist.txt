@@ -1,5 +1,4 @@
 [
-    "http://lafelabs.org/factory/combiner/",
-    "n",
-    "http://trashrobot.org/"
+    "https://en.wikipedia.org/wiki/Major_General_Marquis_Gilbert_de_Lafayette",
+    "https://en.wikipedia.org/wiki/Rochambeau"
 ]

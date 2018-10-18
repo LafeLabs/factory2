@@ -46,6 +46,18 @@ EGO DEATH:
 
 </head>
 <body>
+<div id = "symbolsdatadiv" style = "display:none"><?php
+
+$files = scandir(getcwd()."/../symbol/svg");
+$listtext = "";
+foreach(array_reverse($files) as $value){
+    if($value != "." && $value != ".." && substr($value,-4) == ".svg"){
+        $listtext .= $value.",";
+    }
+}
+echo $listtext;
+
+?></div>
 <div id = "listdiv" style = "display:none"><?php
 
 $files = scandir(getcwd()."/../uploader/images");

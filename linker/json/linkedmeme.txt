@@ -1,29 +1,21 @@
 {
-    "imgurl": "http://localhost:8000/uploader/images/image3.PNG",
+    "imgurl": "http://localhost:8000/symbol/svg/svg1539822922.svg",
     "topimages": [
         {
-            "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0,
-            "yoverw": -0.001425661914460285,
-            "woverw": 0.0814663951120163,
-            "angle": 0,
-            "href": "http://lafelabs.org/factory/combiner/"
+            "url": "http://localhost:8000/symbol/svg/svg1539822302.svg",
+            "xoverw": 0.49645390070921985,
+            "yoverw": 0.3478723404255319,
+            "woverw": 0.14184397163120568,
+            "angle": 50.2655,
+            "href": ""
         },
         {
-            "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0.48065173116089616,
-            "yoverw": 0.2470468431771894,
-            "woverw": 0.0814663951120163,
-            "angle": 0,
-            "href": "http://trashrobot.org/"
-        },
-        {
-            "url": "http://localhost:8000/uploader/images/image4.PNG",
-            "xoverw": 0.9103869653767821,
-            "yoverw": 0.0036659877800407333,
-            "woverw": 0.0814663951120163,
-            "angle": 0,
-            "href": "http://lafelabs.org/factory/combiner/"
+            "url": "http://localhost:8000/symbol/svg/svg1539822302.svg",
+            "xoverw": 0.30319148936170215,
+            "yoverw": 0.4099290780141844,
+            "woverw": 0.14184397163120568,
+            "angle": 171.531,
+            "href": ""
         }
     ]
 }
