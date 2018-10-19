@@ -14,6 +14,7 @@
     mkdir("json");
     mkdir("icons");
     mkdir("svg");
+    mkdir("symbols");
 
     foreach($dna as $dirs){
         mkdir($dirs->path);
