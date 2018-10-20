@@ -47,6 +47,18 @@ EGO DEATH:
 
 </head>
 <body>
+<div id = "mapslistdiv" style = "display:none"><?php
+
+$files = scandir(getcwd()."/../maps");
+$listtext = "";
+foreach($files as $value){
+    if($value != "html" && $value != "php" && $value != "." && $value != ".." && is_dir("../maps/".$value)){
+        $listtext .= $value.",";
+    }
+}
+echo $listtext;
+
+?></div>
 <div id = "memedatadiv" style = "display:none"><?php
 
 echo file_get_contents("../aligner/json/currentmeme.txt");

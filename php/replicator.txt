@@ -9,6 +9,7 @@
     mkdir("symbols");
     mkdir("uploader");
         mkdir("uploader/images");
+        mkdir("uploader/json");
     mkdir("combiner");
         mkdir("combiner/json");
     mkdir("aligner");
