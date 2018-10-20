@@ -38,7 +38,7 @@ if(isset($_GET['path'])){
         echo file_get_contents("symbols/".$_GET['path']."/bytecode/shapetable.txt");
     }
     if(file_exists($_GET['path']."/bytecode/font.txt")){
-        echo file_get_contents($_GET['path']."/bytecode/font.txt");
+        echo file_get_contents("symbols/".$_GET['path']."/bytecode/font.txt");
     }
 }
 

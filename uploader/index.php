@@ -47,6 +47,11 @@ EGO DEATH:
 
 </head>
 <body>
+<div id = "externalurlsdiv" style = "display:none"><?php
+
+echo file_get_contents("json/externalurls.txt");
+
+?></div>
 <div id = "listdiv" style = "display:none"><?php
 
 $files = scandir(getcwd()."/images");

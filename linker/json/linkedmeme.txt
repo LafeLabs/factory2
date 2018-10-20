@@ -1,29 +1,13 @@
 {
-    "imgurl": "http://lafelabs.org/factory/symbol/svg/svg1539575918.svg",
+    "imgurl": "https://i.imgur.com/5226cet.png",
     "topimages": [
         {
-            "url": "http://localhost:8000/uploader/images/image2.PNG",
-            "xoverw": 0.5627450980392157,
-            "yoverw": 0.6039215686274509,
-            "woverw": 0.19607843137254902,
+            "url": "http://localhost:8000/symbol/svg/svg1539822302.svg",
+            "xoverw": 0.5124113475177305,
+            "yoverw": 0.651063829787234,
+            "woverw": 0.14184397163120568,
             "angle": 0,
-            "href": ""
-        },
-        {
-            "url": "http://lafelabs.org/factory/symbol/svg/svg1539177823.svg",
-            "xoverw": 0.3764705882352941,
-            "yoverw": 0.5705882352941176,
-            "woverw": 0.33725490196078434,
-            "angle": 30.1593,
-            "href": ""
-        },
-        {
-            "url": "http://localhost:8000/uploader/images/image1.png",
-            "xoverw": 0.24901960784313726,
-            "yoverw": 0.5431372549019607,
-            "woverw": 0.1568627450980392,
-            "angle": 0,
-            "href": ""
+            "href": "http://lafelabs.org/factory/"
         }
     ]
 }

@@ -9,6 +9,13 @@
     document.getElementById("rightfeed").style.display = "block";
     document.getElementById("inputtable").style.display = "block";
     document.getElementById("inputlabel").innerHTML = "External Vector Graphics Feed:";
+    
+    if(document.getElementById("externalurlsdiv").innerHTML.length > 1){
+        externalurls = JSON.parse(document.getElementById("externalurlsdiv").innerHTML);
+    }
+    else{
+        externalurls = [];
+    }
 
     imagelist  = document.getElementById("listdiv").innerHTML.split(",");
     for(var index = 0;index < imagelist.length;index++){
@@ -51,6 +58,25 @@
         }   
     }
 
+
+    if(externalurls.length > 0){
+        for(var index = 0;index < externalurls.length;index++){
+            var newimg = document.createElement("IMG");
+            newimg.src = externalurls[index];
+            document.getElementById("leftfeed").appendChild(newimg);
+            newimg.onclick = function(){
+                var newimg2 = document.createElement("img");
+                newimg2.src = this.src;
+                document.getElementById("rightfeed").appendChild(newimg2);
+                redraw();
+                newimg2.onclick = function(){
+                    document.getElementById("rightfeed").removeChild(this);
+                    redraw();
+                }
+            }
+        }
+    }
+    
     function redraw(){
         currentFile = "json/imagelist.txt";
         imagelist = [];

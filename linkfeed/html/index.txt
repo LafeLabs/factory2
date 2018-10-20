@@ -6,6 +6,7 @@ document.getElementById("inputtable").style.display = "block";
 document.getElementById("deletebutton").style.display = "block";
 document.getElementById("tableinput").style.width = "30em";
 document.getElementById("inputlabel").innerHTML = "INPUT URL:";
+document.getElementById("inputlabel").className = "button";
 
 document.getElementById("tableinput").select();
 
@@ -46,7 +47,21 @@ document.getElementById("tableinput").onchange = function(){
     httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
     httpc.send("data="+data+"&filename=json/linklist.txt");//send text to filesaver.php
 }
-
+document.getElementById("inputlabel").onclick = function(){
+    linkdata.push(document.getElementById("tableinput").value);
+    var newa = document.createElement("A");
+    newa.href = document.getElementById("tableinput").value;
+    newa.innerHTML = document.getElementById("tableinput").value;
+    var newp = document.createElement("p");
+    newp.appendChild(newa);
+    document.getElementById("leftfeed").appendChild(newp);
+    data = encodeURIComponent(JSON.stringify(linkdata,null, "    "));
+    var httpc = new XMLHttpRequest();
+    var url = "filesaver.php";        
+    httpc.open("POST", url, true);
+    httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+    httpc.send("data="+data+"&filename=json/linklist.txt");//send text to filesaver.php
+}
 
 document.getElementById("deletebutton").onclick = function(){
     linkdata = [];
