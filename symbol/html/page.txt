@@ -1,6 +1,9 @@
 <table id = "linkTable">
     <tr>
     <td>
+        <a href = "svg2markdown.php" id = "markdownlink"><img style = "width:80px" src = "icons/markdown.svg"/></a>
+    </td>
+    <td>
         <a id = "svglink" href = "svgfeed.php"><img style = "width:80px" src = "icons/svgfeed.svg"></a>
     </td>
     <td>
