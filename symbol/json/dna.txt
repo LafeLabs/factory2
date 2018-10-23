@@ -16,6 +16,7 @@
 			"savetable.txt",
 			"shapetableeditor.txt",
 			"stylejsoneditor.txt",
+			"svg2markdown.txt",
 			"svgfeed.txt",
 			"text2php.txt",
 			"tree.txt",
