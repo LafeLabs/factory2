@@ -1,0 +1,19 @@
+#Header
+
+$$E=mc^2$$ 
+
+$$
+\frac{-\hbar}{2m}\nabla^2\Psi + V\Psi=E\Psi
+$$
+
+* foo
+* bar
+
+This is a paragraph.  
+
+
+
+
+
+
+

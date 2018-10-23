@@ -15,11 +15,13 @@
     document.getElementById("inputlabel").innerHTML = "EXTERNAL IMAGE URL:";
         imagenames = document.getElementById("listdiv").innerHTML.split(",");
 
+    localimages = [];
     for(var index = 0;index < imagenames.length;index++){
         if(imagenames[index].length> 2){
             var newimg = document.createElement("IMG");
             newimg.src = "images/" + imagenames[index];
             document.getElementById("leftfeed").appendChild(newimg);
+            localimages.push(imagenames[index]);
         }
     }
     for(var index = 0;index < externalurls.length;index++){
@@ -69,4 +71,12 @@
             httpc.send("data="+data+"&filename=json/externalurls.txt");//send text to filesaver.php   
         }
     }
+    
+    data = encodeURIComponent(JSON.stringify(localimages,null,"   "));
+    var httpc = new XMLHttpRequest();
+    var url = "filesaver.php";        
+    httpc.open("POST", url, true);
+    httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+    httpc.send("data="+data+"&filename=json/localimages.txt");//send text to filesaver.php   
+    
 </script>
