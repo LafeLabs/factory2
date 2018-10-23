@@ -38,6 +38,7 @@
 			"map.svg",
 			"mapfactory.svg",
 			"replicator.svg",
+			"scroll.svg",
 			"symbol.svg",
 			"upload.svg"
 		]
