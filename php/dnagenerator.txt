@@ -81,7 +81,8 @@ $finalstring .= getfiles("maps/php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("maps/html");
 $finalstring .= ",\n";
-$finalstring .= "    {\n        \"path\":\"symbol\",\n        \"files\":[\n            \"replicator.php\"\n        ]\n    }";
+$finalstring .= "    {\n        \"path\":\"symbol\",\n        \"files\":[\n            \"replicator.php\"\n        ]\n    },\n";
+$finalstring .= "    {\n        \"path\":\"scroll\",\n        \"files\":[\n            \"replicator.php\"\n        ]\n    }";
 
 $finalstring .= "\n]";
 
