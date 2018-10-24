@@ -22,6 +22,8 @@ document.getElementById("editor").style.width = 0.45*innerWidth.toString() + "px
 document.getElementById("editor").style.height = (innerHeight - 110).toString() + "px";
 var converter = new showdown.Converter();
 
+converter.setOption('literalMidWordUnderscores', 'true');
+
 currentFile = "markdown/scroll.txt";
 var httpc = new XMLHttpRequest();
 httpc.onreadystatechange = function() {
