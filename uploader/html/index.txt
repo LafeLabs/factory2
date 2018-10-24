@@ -1,4 +1,14 @@
 <script>
+
+    var newtd =  document.createElement("TD");
+    var newa = document.createElement("A");
+    var newimg = document.createElement("IMG");
+    newa.href = "markdownlinks.php";
+    newimg.src = "../symbols/markdown.svg";
+    newa.appendChild(newimg);
+    newtd.appendChild(newa);
+    document.getElementById("linktable").getElementsByTagName("TR")[0].appendChild(newtd);
+        
     document.getElementById("uploadform").style.display = "block";
     document.getElementById("inputtable").style.display = "block";
     document.getElementById("leftfeed").style.display = "block";

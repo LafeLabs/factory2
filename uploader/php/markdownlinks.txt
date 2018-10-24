@@ -24,43 +24,29 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 </head>
 <body>
-<div id = "pathdiv" style= "display:none"><?php
-
-    if(isset($_GET['path'])){
-        echo $_GET['path'];
-    }
-
-?></div>
 <input id = "codeinput">
 
 <table id  = "linktable">
     <tr>
-        <td><a href = "index.php"><img style = "width:80px" src = "../symbols/symbol.svg"></a></td>
+        <td><a href = "index.php"><img style = "width:80px" src = "../symbols/upload.svg"></a></td>
         <td><a href = "../scroll/"><img style = "width:80px" src = "../symbols/scroll.svg"></a></td>
     </tr>
 </table>
+
 
 <div id = "scroll">
     
 
 <?php
 
-    if(isset($_GET['path'])){
-        $path = $_GET['path'];
-        $svgpath = "/symbols/".$path."svg";
-        $svgpath2 = "symbols/".$path."svg/";
+    $svgpath = "/images";
+    $svgpath2 = "images/";
 
-    }
-    else{
-        $svgpath = "/svg";
-        $svgpath2 = "svg/";
-    }
- 
     $svgs = scandir(getcwd().$svgpath);
     $svgs = array_reverse($svgs);
     foreach($svgs as $value){
-        if($value != "." && $value != ".." && substr($value,-4) == ".svg"){
-            
+        if($value != "." && $value != ".."){
+
             echo "\n<p>\n";      
             echo "\n    <img src = \"".$svgpath2.$value."\"/>";
             echo "\n\n</p>\n";
@@ -69,10 +55,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 ?>
 </div>
 <script>
-    path = document.getElementById("pathdiv").innerHTML;
-    if(path.length>1){
-        document.getElementById("indexlink").href = "index.php?path=" + path;
-    }
+
     
     images  = document.getElementById("scroll").getElementsByTagName("IMG");
     for(var index = 0;index < images.length;index++){

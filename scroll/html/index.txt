@@ -7,6 +7,9 @@
         <td><a href = "symbol/">
             <img style = "width:80px;" src = "icons/symbol.svg"/>
         </a></td>
+        <td><a href = "../">
+            <img style = "width:80px;" src = "../symbols/map.svg"/>
+        </a></td>
     </tr>
 </table>
 </div>

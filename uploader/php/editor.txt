@@ -23,6 +23,7 @@ EGO DEATH:
 <body>
 <div id = "linkscroll">
     <a href = "text2php.php">text2php.php</a>
+    <a href = "markdownlinks.php">markdownlinks.php</a>
     <a href = "index.php">index.php</a>
 
 </div>
@@ -33,6 +34,7 @@ EGO DEATH:
     <div class = "html file">html/index.txt</div>
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/editor.txt</div>
+    <div class = "php file">php/markdownlinks.txt</div>
     <div class = "php file">php/filesaver.txt</div>
     <div class = "php file">php/fileloader.txt</div>
     <div class = "php file">php/text2php.txt</div>
