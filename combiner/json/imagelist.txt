@@ -1,4 +1,5 @@
 [
-    "https://i.imgur.com/5226cet.png",
+    "http://localhost:8000/curve/svg/svg1540400168.svg",
+    "http://localhost:8000/symbol/svg/svg1539822302.svg",
     "http://localhost:8000/symbol/svg/svg1539822302.svg"
 ]

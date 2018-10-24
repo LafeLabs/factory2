@@ -63,6 +63,18 @@ foreach(array_reverse($files) as $value){
 echo $listtext;
 
 ?></div>
+<div id = "curvesdatadiv" style = "display:none"><?php
+
+$files = scandir(getcwd()."/../curve/svg");
+$listtext = "";
+foreach(array_reverse($files) as $value){
+    if($value != "." && $value != ".." && substr($value,-4) == ".svg"){
+        $listtext .= $value.",";
+    }
+}
+echo $listtext;
+
+?></div>
 <div id = "listdiv" style = "display:none"><?php
 
 $files = scandir(getcwd()."/../uploader/images");
