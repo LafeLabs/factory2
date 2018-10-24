@@ -12,3 +12,6 @@ $$
 This is a paragraph.  
 
 $\cos{\theta_0}\sin{\theta_1}\cos{\theta_2}$
+
+
+$$\vec{F}=m\vec{a}$$

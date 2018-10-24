@@ -1,4 +1,4 @@
-<svg width="140" height="140" viewbox = "0 0 140 140"  xmlns="http://www.w3.org/2000/svg">
+<svg width="140" height="140" viewbox="0 0 140 140" xmlns="http://www.w3.org/2000/svg">
 
 <!--
 <json>
@@ -65,4 +65,4 @@
 }
 </json>
 -->
-	<path d = "M130 130 L130 10 L10 10 L10 130 L130 130 Z" stroke = "black" stroke-width = "3" fill = "none" />	<path d = "M130 130 L130 70 L70 70 L70 130 L130 130 Z" stroke = "black" stroke-width = "3" fill = "black" />	<path d = "M130 70 L130 10 L70 10 L70 70 L130 70 Z" stroke = "black" stroke-width = "3" fill = "black" /></svg>
+	<path d="M130 130 L130 10 L10 10 L10 130 L130 130 Z" stroke="black" stroke-width="3" fill="none"/>	<path d="M130 130 L130 70 L70 70 L70 130 L130 130 Z" stroke="black" stroke-width="3" fill="black"/>	<path d="M130 70 L130 10 L70 10 L70 70 L130 70 Z" stroke="black" stroke-width="3" fill="black"/></svg>

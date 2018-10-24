@@ -13,6 +13,9 @@
         <td><a href = "../">
             <img style = "width:80px;" src = "../symbols/map.svg"/>
         </a></td>
+        <td id = "modebutton">
+            <img style = "width:80px" src = "../symbols/scrollmode.svg"/>
+        </td>
     </tr>
 </table>
 </div>
@@ -55,6 +58,19 @@ document.getElementById("editor").onkeyup = function(){
     
 }
     
+editmode = true;
+    
+document.getElementById("modebutton").onclick = function(){
+    editmode = !editmode;
+    if(editmode){
+        document.getElementById("scroll").style.width = (0.5*innerWidth).toString() + "px";
+        document.getElementById("editor").style.display = "block";
+    }
+    else{
+        document.getElementById("scroll").style.width = (innerWidth).toString() + "px";
+        document.getElementById("editor").style.display = "none";
+    }
+}
 </script>
 <style>
 body{
@@ -66,6 +82,7 @@ body{
         top:110px;
         width:40%;
         bottom:0px;
+        z-index:0;
     }
     #scroll{
         position:absolute;
@@ -77,6 +94,7 @@ body{
         border:solid;
         border-radius:10px;
         padding:1em 1em 1em 1em;
+        z-index:1;
     }
     #scroll img{
         display:block;
@@ -98,5 +116,8 @@ body{
         position:absolute;
         left:0px;
         top:0px;
+    }
+    #modebutton{
+        cursor:pointer;
     }
 </style>
