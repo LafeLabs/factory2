@@ -5,12 +5,12 @@
 {
     "svgwidth": 140,
     "svgheight": 140,
-    "unit": 60,
+    "unit": 49.58677685950412,
     "x0": 684,
     "y0": 399,
     "x0rel": 0,
     "y0rel": 0,
-    "glyph": "0333,0331,0337,0200,0336,0204,0330,0204,",
+    "glyph": "0337,0337,0337,0341,0337,0341,0336,0336,0341,0330,0332,0332,0341,0336,0333,0341,0336,0341,0332,0332,0337,0332,0341,0333,0333,0336,0333,0341,0337,0341,0337,0333,0341,",
     "table": [
         "0220:0304,0313,0210,0210,0336,0333,0331,0337,0204,0336,0330,0332,0337,0211,0211,",
         "0221:0304,0313,0330,0220,",
@@ -65,4 +65,14 @@
 }
 </json>
 -->
-	<path d = "M130 130 L130 10 L10 10 L10 130 L130 130 Z" stroke = "black" stroke-width = "3" fill = "none" />	<path d = "M130 130 L130 70 L70 70 L70 130 L130 130 Z" stroke = "black" stroke-width = "3" fill = "black" />	<path d = "M130 70 L130 10 L70 10 L70 70 L130 70 Z" stroke = "black" stroke-width = "3" fill = "black" /></svg>
+    <circle cx="70" cy = "70" r = "396.69421487603296" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="70" cy = "70" r = "793.3884297520659" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="70" cy = "70" r = "198.34710743801648" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-327" cy = "-128" r = "198.34710743801648" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-228" cy = "-128" r = "99.17355371900824" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-228" cy = "-128" r = "49.58677685950412" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-426" cy = "-128" r = "99.17355371900824" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-178" cy = "-128" r = "49.58677685950412" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="-178" cy = "-128" r = "99.17355371900824" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="20" cy = "-128" r = "198.34710743801648" stroke = "black" stroke-width = "3" fill = "none" />
+</svg>

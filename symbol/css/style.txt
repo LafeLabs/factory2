@@ -65,7 +65,35 @@ body{
     overflow:scroll;
     height:120px;
 }
+#spellCanvas{
+    position:absolute;
+    left:0px;
+    top:0px;
+}
+#glyphspellinput{
+    position:absolute;
+    bottom:0px;
+    left:0px;
+    height:20px;
+    font-size:16px;
+    font-family:courier;
+}
 #actionInput{
     width:1em;
+    border:solid;
+    border-color:green;
+    border-width:4px;
+    border-radius:10px;
 }
-
+#printInput{
+    width:1em;
+    border:solid;
+    border-color:orange;   
+    border-width:1px;
+}
+#stackInput{
+    width:1em;
+    border:solid;
+    border-color:blue;
+    border-width:1px;
+}

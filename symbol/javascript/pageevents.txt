@@ -167,7 +167,12 @@ document.getElementById("actionInput").onkeydown = function(e) {
     }
     
     
-    
+document.getElementById("glyphspellinput").onchange = function(){
+    cleanGlyph = this.value;
+    currentGlyph = cleanGlyph + "0207,";
+    redraw();
+}
+
 
     
 document.getElementById("actionInput").onkeypress = function(a){//action
@@ -204,6 +209,95 @@ document.getElementById("actionInput").onkeypress = function(a){//action
 }
     
     
+    document.getElementById("printInput").onkeydown = function(e) {
+        charCode = e.keyCode || e.which;
+        arrowkey = false;
+        if(charCode == 010){
+            doTheThing(010);
+            redraw();
+            arrowkey = true;
+        }
+        if(charCode == 045){
+            doTheThing(020);
+            redraw();
+            arrowkey = true;
+        }
+        if(charCode == 047){
+            doTheThing(021);
+            redraw();
+            arrowkey = true;
+        }
+    }
+    
+    document.getElementById("stackInput").onkeydown = function(e) {
+        charCode = e.keyCode || e.which;
+        arrowkey = false;
+        if(charCode == 010){
+            doTheThing(010);
+            redraw();
+            arrowkey = true;
+        }
+        if(charCode == 045){
+            doTheThing(020);
+            redraw();
+            arrowkey = true;
+        }
+        if(charCode == 047){
+            doTheThing(021);
+            redraw();
+            arrowkey = true;
+        }
+
+    }
  
+ document.getElementById("printInput").onkeypress = function(a){//print
+    charCode = a.keyCode || a.which;
+    if(charCode != 010  && charCode != 047  && !arrowkey){
+        var glyphSplit = currentGlyph.split(",");
+        currentGlyph = "";
+        for(var index = 0;index < glyphSplit.length;index++){
+            if(glyphSplit[index].length > 0 && glyphSplit[index] != "0207"){
+                currentGlyph += glyphSplit[index] + ",";
+            }
+            if(glyphSplit[index] == "0207"){
+                currentGlyph += "0" + (charCode + 01000).toString(8) + ",0207,";
+            }
+        }
+        var glyphSplit = currentGlyph.split(",");
+        currentGlyph = "";
+        for(var index = 0;index < glyphSplit.length;index++){
+            if(glyphSplit[index].length > 0  && parseInt(glyphSplit[index]) >= 040){
+                currentGlyph += glyphSplit[index] + ",";
+            }
+        }
+        redraw();
+        this.value = "";
+    }
+}
+    
+document.getElementById("stackInput").onkeypress = function(a){//stack
+    charCode = a.keyCode || a.which;    
+    if(charCode != 010 && charCode != 047  && !arrowkey){
+        var glyphSplit = currentGlyph.split(",");
+        currentGlyph = "";
+        for(var index = 0;index < glyphSplit.length;index++){
+            if(glyphSplit[index].length > 0 && glyphSplit[index] != "0207"){
+                currentGlyph += glyphSplit[index] + ",";
+            }
+            if(glyphSplit[index] == "0207"){
+                currentGlyph += "0" + (charCode).toString(8) + ",0207,";
+            }
+        }
+        var glyphSplit = currentGlyph.split(",");
+        currentGlyph = "";
+        for(var index = 0;index < glyphSplit.length;index++){
+            if(glyphSplit[index].length > 0  && parseInt(glyphSplit[index]) >= 040){
+                currentGlyph += glyphSplit[index] + ",";
+            }
+        }
+        redraw();
+        this.value = "";
+    }
+}
  
  

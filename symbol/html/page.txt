@@ -34,6 +34,20 @@
     <td></td>
     <td></td>
     </tr>
+    <tr>
+    <td><input id = "printInput"/></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
+    <tr>
+    <td><input id = "stackInput"/></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    </tr>
 
 </table>
 <div class = "button" id = "savesvg">SAVE</div>
@@ -43,6 +57,7 @@
 
 <div id = "spellBox">
     <canvas id="spellCanvas"></canvas>
+    <input id = "glyphspellinput"/>
 </div>
 
 <table id = "keytable">
