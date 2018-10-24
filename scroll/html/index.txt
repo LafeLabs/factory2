@@ -4,8 +4,11 @@
         <td><a href = "editor.php">
             <img style = "width:80px;" src = "icons/editor.svg"/>
         </a></td>
-        <td><a href = "symbol/">
+        <td><a href = "../symbol/svg2markdown.php">
             <img style = "width:80px;" src = "icons/symbol.svg"/>
+        </a></td>
+        <td><a href = "../uploader/markdownlinks.php">
+            <img style = "width:80px;" src = "../symbols/upload.svg"/>
         </a></td>
         <td><a href = "../">
             <img style = "width:80px;" src = "../symbols/map.svg"/>
