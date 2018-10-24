@@ -131,6 +131,24 @@ if(isset($_GET['url'])){
     </tr>
 </table>
 
+<table id = "inputtable">
+    <tr>
+        <td>WIDTH:</td><td><input/></td>
+    </tr>
+    <tr>
+        <td>HEIGHT:</td><td><input/></td>
+    </tr>
+    <tr>
+        <td>UNIT:</td><td><input/></td>
+    </tr>
+    <tr>
+        <td>X OFFSET:</td><td><input/></td>
+    </tr>
+    <tr>
+        <td>Y OFFSET:</td><td><input/></td>
+    </tr>
+</table>
+
 <div id = "resetbutton" class = "button">RESET</div>
 
 <table id = "hammertable">
@@ -181,6 +199,7 @@ function init(){
 
     currentGlyph = currentJSON.glyph;
 
+    tableinputs = document.getElementById("inputtable").getElementsByTagName("INPUT");
 
 }
 </script>
@@ -219,6 +238,13 @@ ctx.lineWidth = 1;
     httpc.send("data="+data+"&filename="+currentFile);//send text to filesaver.php
     
 
+    tableinputs[0].value = currentJSON.svgwidth.toString();
+    tableinputs[1].value = currentJSON.svgheight.toString();
+    tableinputs[2].value = currentJSON.unit.toString();
+    tableinputs[3].value = currentJSON.x0rel.toString();
+    tableinputs[4].value = currentJSON.y0rel.toString();
+
+    
 }
 </script>
 <script id = "pageevents">
@@ -262,6 +288,29 @@ mc3.on("panleft panright panup pandown tap press", function(ev) {
     redraw();
 });
 
+
+tableinputs[0].onchange = function(){
+    currentJSON.svgwidth = parseInt(this.value);
+    redraw();
+} 
+tableinputs[1].onchange = function(){
+    currentJSON.svgheight = parseInt(this.value);
+    redraw();
+} 
+tableinputs[2].onchange = function(){
+    currentJSON.unit = parseInt(this.value);
+    redraw();
+} 
+tableinputs[3].onchange = function(){
+    currentJSON.x0rel = parseInt(this.value);
+    redraw();
+} 
+tableinputs[4].onchange = function(){
+    currentJSON.y0rel = parseInt(this.value);
+    redraw();
+} 
+
+
 </script>
 <style>
 body{
@@ -294,6 +343,12 @@ body{
 }
 #linkTable img{
     width:80px;
+}
+#inputtable{
+    position:absolute;
+    top:110px;
+    left:0px;
+    z-index:4;
 }
 #mainCanvas{
     top:0px;

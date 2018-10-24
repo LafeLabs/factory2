@@ -1,7 +1,7 @@
 {
-    "svgwidth": 250,
+    "svgwidth": 200,
     "svgheight": 250,
-    "unit": 100,
+    "unit": 60,
     "x0": 684,
     "y0": 399,
     "x0rel": 0,

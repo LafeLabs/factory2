@@ -170,7 +170,7 @@ body{
     border-color:blue;
     border-width:10px;
     background-color:white;
-    z-index:-1;
+    z-index:99999999;
 }
 .slidebar{
     position:absolute;
