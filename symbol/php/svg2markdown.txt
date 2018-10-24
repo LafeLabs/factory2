@@ -35,7 +35,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 <table id  = "linktable">
     <tr>
-        <td><a href = "index.php"><img style = "width:80px" src = "../symbols/symbol.svg"></a></td>
+        <td><a href = "index.php" id = "indexlink"><img style = "width:80px" src = "../symbols/symbol.svg"></a></td>
         <td><a href = "../scroll/"><img style = "width:80px" src = "../symbols/scroll.svg"></a></td>
     </tr>
 </table>
