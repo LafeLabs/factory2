@@ -2,6 +2,7 @@
 	{
 		"path":"php",
 		"files":[
+			"deleteallfiles.txt",
 			"dnagenerator.txt",
 			"editor.txt",
 			"fileloader.txt",
@@ -37,6 +38,7 @@
 			"linkfeed2.svg",
 			"map.svg",
 			"mapfactory.svg",
+			"markdown.svg",
 			"replicator.svg",
 			"scroll.svg",
 			"symbol.svg",
@@ -51,6 +53,7 @@
 			"fileloader.txt",
 			"filesaver.txt",
 			"index.txt",
+			"markdownlinks.txt",
 			"text2php.txt",
 			"upload.txt"
 		]

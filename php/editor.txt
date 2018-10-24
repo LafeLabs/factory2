@@ -39,6 +39,8 @@ EGO DEATH:
     <div class = "php file">php/fileloader.txt</div>
     <div class = "php file">php/text2php.txt</div>
     <div class = "php file">php/dnagenerator.txt</div>
+    <div class = "php file">php/deleteallfiles.txt</div>
+
     <div class = "php file">php/copy.txt</div>
 
     <div class = "php file">symbol/replicator.php</div>
