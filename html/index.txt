@@ -1,6 +1,5 @@
 <div id = "navbar">
     <img src = "symbols/diamond.svg" id = "topdiamond"/>
-
     <table id = "linktable">
         <tr>
             <td>

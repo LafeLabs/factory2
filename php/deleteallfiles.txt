@@ -1,4 +1,13 @@
 <?php
+/*
+DANGER ZONE!
+THIS WILL DESTROY ALL THE THINGS!
+NUKE IT FROM ORBIT; IT'S THE ONLY WAY TO BE SURE
+
+More specifically this deletes everything in the directory in which it exists, including all the sub directories in that directory.  If this is executed at the top level of a web site it will completely clear out the site, including every kind of image, symbol, code, etc.  All links to that site will permanently fail.  
+
+That being said, this is a critical tool for a decentralized and open web, and we must be prepared to use this often and easily as a every day part of using this web.  This is like erasing a chalk board: done at the wrong time it's a disaster, but if never done, the board becomes useless.  
+*/
 
 
 function rrmdir($src) {
@@ -19,6 +28,18 @@ function rrmdir($src) {
 }
 
 
-rrmdir(getcwd());
+$files = scandir(getcwd());
+
+foreach($files as $value){
+    if(is_dir($value) && $value != "." && $value != ".."){
+        rrmdir($value);
+    }
+    else{
+        unlink($value);
+    }
+
+}
+    
+
 
 ?>
