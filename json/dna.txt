@@ -30,6 +30,7 @@
 		"files":[
 			"aligner.svg",
 			"combiner2.svg",
+			"curve.svg",
 			"delete.svg",
 			"diamond.svg",
 			"editor.svg",
@@ -171,6 +172,12 @@
 	},
     {
         "path":"symbol",
+        "files":[
+            "replicator.php"
+        ]
+    },
+    {
+        "path":"curve",
         "files":[
             "replicator.php"
         ]

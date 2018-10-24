@@ -9,6 +9,11 @@
                 </a>
             </td>
             <td>
+                <a href = "curve/">
+                    <img src = "symbols/curve.svg"/>
+                </a>
+            </td>
+            <td>
                 <a href = "scroll/">
                     <img src = "symbols/scroll.svg"/>
                 </a>

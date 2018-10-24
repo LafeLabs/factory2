@@ -45,6 +45,7 @@ EGO DEATH:
 
     <div class = "php file">symbol/replicator.php</div>
     <div class = "php file">scroll/replicator.php</div>
+    <div class = "php file">curve/replicator.php</div>
 
     <div class = "json file">json/dna.txt</div>
 </div>
