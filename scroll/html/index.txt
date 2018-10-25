@@ -67,11 +67,11 @@ editmode = true;
 document.getElementById("modebutton").onclick = function(){
     editmode = !editmode;
     if(editmode){
-        document.getElementById("scroll").style.width = (0.5*innerWidth).toString() + "px";
+        document.getElementById("scroll").style.left = (0.5*innerWidth).toString() + "px";
         document.getElementById("editor").style.display = "block";
     }
     else{
-        document.getElementById("scroll").style.width = (innerWidth).toString() + "px";
+        document.getElementById("scroll").style.left = "10px";
         document.getElementById("editor").style.display = "none";
     }
 }
@@ -91,19 +91,20 @@ body{
     #scroll{
         position:absolute;
         right:0px;
-        width:50%;
+        left:50%;
         top:100px;
         bottom:0px;
         overflow:scroll;
         border:solid;
         border-radius:10px;
-        padding:1em 1em 1em 1em;
+        padding:2em 2em 2em 2em;
         z-index:1;
     }
     #scroll img{
         display:block;
         margin:auto;
         max-width:90%;
+    
     }
     h1,h2,h3,h4,h5{
         width:100%;
