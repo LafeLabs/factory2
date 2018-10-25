@@ -2,11 +2,11 @@
 
 $finalstring = "[\n";
 
-$basefiles = scandir(getcwd());
+$files = scandir(getcwd()."/symbols");
 
-foreach($basefiles as $value){
-    if($value != "javascript" && $value != "css" && $value != "bytecode" && $value != "html" && $value != "svg" && $value != "memes" && $value != "json" && $value != "php" && $value != "." && $value != ".." && is_dir($value)){
-                $finalstring .= "\"".$value."\",";
+foreach($files as $value){
+    if($value != "." && $value != ".."){
+        $finalstring .= "\"".$value."\",";
     }
 }
 

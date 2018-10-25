@@ -1,6 +1,12 @@
 <?php
 
-    $url = "https://raw.githubusercontent.com/LafeLabs/root2/master/symbol/json/treedna.txt";
+
+
+//replace this with url of tree dna in source page:
+
+    $url = "https://raw.githubusercontent.com/LafeLabs/factory2/master/symbol/json/treedna.txt";
+    
+    
     $dnaraw = file_get_contents($url);
     $dna =json_decode($dnaraw);
     $baseurl = explode("json",$url)[0];
@@ -20,6 +26,11 @@
         fclose($file);  //close file
         $data = file_get_contents($baseurl."/".$dirs."/json/stylejson.txt");
         $file = fopen($dirs."/json/stylejson.txt","w");// create new file with this name
+        fwrite($file,$data); //write data to file
+        fclose($file);  //close file
+
+        $data = file_get_contents($baseurl."/".$dirs."/bytecode/font.txt");
+        $file = fopen($dirs."/bytecode/font.txt","w");// create new file with this name
         fwrite($file,$data); //write data to file
         fclose($file);  //close file
 
