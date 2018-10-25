@@ -8,7 +8,8 @@
 			"filesaver.txt",
 			"index.txt",
 			"replicator.txt",
-			"text2php.txt"
+			"text2php.txt",
+			"tree.txt"
 		]
 	},
 	{
@@ -34,6 +35,8 @@
 	{
 		"path":"markdown",
 		"files":[
+			"bar.txt",
+			"foo.txt",
 			"scroll.txt"
 		]
 	},
