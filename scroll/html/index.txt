@@ -13,6 +13,9 @@
         <td><a href = "../">
             <img style = "width:80px;" src = "../symbols/map.svg"/>
         </a></td>
+        <td><a href = "tree.php">
+            <img style = "width:80px;" src = "../symbol/icons/tree.svg"/>
+        </a></td>
         <td id = "modebutton">
             <img style = "width:80px" src = "../symbols/scrollmode.svg"/>
         </td>
@@ -30,7 +33,9 @@ var converter = new showdown.Converter();
 
 converter.setOption('literalMidWordUnderscores', 'true');
 
-currentFile = "markdown/scroll.txt";
+//currentFile = "markdown/scroll.txt";
+currentFile = "markdown/" + document.getElementById("filenamediv").innerHTML;
+
 var httpc = new XMLHttpRequest();
 httpc.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -48,7 +53,6 @@ httpc.send();
 document.getElementById("editor").onkeyup = function(){
     document.getElementById("scroll").innerHTML = converter.makeHtml(this.value);
     MathJax.Hub.Typeset();//tell Mathjax to update the math
-    currentFile = "markdown/scroll.txt";
     data = encodeURIComponent(this.value);
     var httpc = new XMLHttpRequest();
     var url = "filesaver.php";        

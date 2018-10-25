@@ -43,6 +43,17 @@ EGO DEATH:
 <script src = "https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.js"></script>
 </head>
 <body>
+<div id = "filenamediv" style = "display:none"><?php
+
+if(isset($_GET['filename'])){
+    echo $_GET['filename'];
+}
+else{
+    echo "scroll.txt";
+}
+    
+
+?></div>
 <?php
     echo file_get_contents("html/index.txt");
 ?>
