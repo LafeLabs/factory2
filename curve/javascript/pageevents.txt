@@ -78,12 +78,21 @@
         currentjson.image.angle = this.value;
         redraw();
     }
+    imageinputs[4].onchange = function(){
+        currentjson.image.url = this.value;
+        document.getElementById("backgroundimage").src = currentjson.image.url;
+        redraw();
+    }
+    functioninputs[0].onchange = function(){
+        currentjson.YofXstring = this.value;
+        redraw();
+    }
 
     document.getElementById("imagemodebutton").onclick = function(){
         editmode = "image";
         document.getElementById("maintable").style.display = "none";
         document.getElementById("imagetable").style.display = "block";
-
+        document.getElementById("functiontable").style.display = "none";
         document.getElementById("bar1").innerHTML = "SCALE";
         document.getElementById("bar2").innerHTML = "ANGLE";
 
@@ -92,8 +101,20 @@
         editmode = "plot";
         document.getElementById("maintable").style.display = "block";
         document.getElementById("imagetable").style.display = "none";
+        document.getElementById("functiontable").style.display = "none";
+
         document.getElementById("bar1").innerHTML = "g";
         document.getElementById("bar2").innerHTML = "G";
+
+    }
+    document.getElementById("functionmodebutton").onclick = function(){
+        editmode = "function";
+        document.getElementById("maintable").style.display = "none";
+        document.getElementById("imagetable").style.display = "none";
+        document.getElementById("functiontable").style.display = "block";
+
+        document.getElementById("bar1").innerHTML = "";
+        document.getElementById("bar2").innerHTML = "";
 
     }
     

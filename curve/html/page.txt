@@ -46,18 +46,27 @@
     <tr>
         <td>angle:</td><td><input></td>
     </tr>
+    <tr>
+        <td>url:</td><td><input></td>
+    </tr>
+</table>
+
+
+<table id = "functiontable">
+    <tr>
+        <td>YofX:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>X0:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>Y0:</td><td><input></td>
+    </tr>
 </table>
 
 <div class = "bar" id = "bar1">g</div>
 <div class = "bar" id = "bar2">G</div>
 
-
-
-<div class = "bar" id = "bar3">w</div>
-<div class = "bar" id = "bar4">h</div>
-
-<div class = "bar" id = "bar5">SCALE</div>
-<div class = "bar" id = "bar6">ANGLE</div>
 
 <style>
 body{
@@ -126,6 +135,13 @@ body{
     top:110px;
 }
 #imagetable{
+    position:absolute;
+    left:0px;
+    z-index:3;
+    top:110px;
+    display:none;
+}
+#functiontable{
     position:absolute;
     left:0px;
     z-index:3;

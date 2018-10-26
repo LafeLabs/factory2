@@ -1,11 +1,11 @@
-
 function YofX(){
     
     X = currentjson.plotparams.g*(x - currentjson.plotparams.x0) - currentjson.funcparams.X0;
-    Y = Math.sin(X);
+    eval(currentjson.YofXstring);
     y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y - currentjson.funcparams.Y0);
 
 }
+
 
 
 
