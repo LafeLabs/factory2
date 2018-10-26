@@ -1,2 +1,100 @@
 
 
+    mc = new Hammer(document.getElementById("mainCanvas"));
+    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    mc.on("panleft panright panup pandown tap press", function(ev) {
+        
+        if(editmode == "plot"){
+            currentjson.plotparams.x0 = ev.deltaX;
+            currentjson.plotparams.y0 = ev.deltaY;
+        }
+        if(editmode == "image"){
+            currentjson.image.xoverw = ev.deltaX/(0.25*innerWidth);
+            currentjson.image.yoverw = ev.deltaY/(0.25*innerWidth);
+        }
+    
+        redraw();
+        
+    });    
+    
+
+
+    mc1 = new Hammer(document.getElementById("bar1"));
+    mc1.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    mc1.on("panleft panright panup pandown tap press", function(ev) {
+        if(editmode == "plot"){
+            currentjson.plotparams.g = g0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
+        }
+        if(editmode == "image"){
+            currentjson.image.woverw = Math.pow(10,ev.deltaX/(0.5*innerWidth));
+        }
+        redraw();
+    });
+
+    mc2 = new Hammer(document.getElementById("bar2"));
+    mc2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
+    mc2.on("panleft panright panup pandown tap press", function(ev) {
+        if(editmode == "plot"){
+            currentjson.plotparams.G = G0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
+        }
+        if(editmode == "image"){
+            currentjson.image.angle = 360*ev.deltaX/(0.25*innerWidth);
+        }
+        redraw();
+    });
+    
+    
+    inputs[0].onchange = function(){
+        currentjson.plotparams.x0 = this.value;
+        redraw();
+    }
+    inputs[1].onchange = function(){
+        currentjson.plotparams.y0 = this.value;
+        redraw();
+    }
+    inputs[2].onchange = function(){
+        currentjson.plotparams.g = this.value;
+        g0 = this.value;
+        redraw();
+    }
+    inputs[3].onchange = function(){
+        currentjson.plotparams.G = this.value;
+        G0 = this.value;
+        redraw();
+    }
+    imageinputs[0].onchange = function(){
+        currentjson.image.xoverw = this.value;
+        redraw();
+    }
+    imageinputs[1].onchange = function(){
+        currentjson.image.yoverw = this.value;
+        redraw();
+    }
+    imageinputs[2].onchange = function(){
+        currentjson.image.woverw = this.value;
+        redraw();
+    }
+    imageinputs[3].onchange = function(){
+        currentjson.image.angle = this.value;
+        redraw();
+    }
+
+    document.getElementById("imagemodebutton").onclick = function(){
+        editmode = "image";
+        document.getElementById("maintable").style.display = "none";
+        document.getElementById("imagetable").style.display = "block";
+
+        document.getElementById("bar1").innerHTML = "SCALE";
+        document.getElementById("bar2").innerHTML = "ANGLE";
+
+    }
+    document.getElementById("plotmodebutton").onclick = function(){
+        editmode = "plot";
+        document.getElementById("maintable").style.display = "block";
+        document.getElementById("imagetable").style.display = "none";
+        document.getElementById("bar1").innerHTML = "g";
+        document.getElementById("bar2").innerHTML = "G";
+
+    }
+    
+    

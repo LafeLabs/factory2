@@ -3,49 +3,84 @@
         <td>
             <a href = "editor.php">EDITOR</a>
         </td>
+        <td class = "button" id = "imagemodebutton">IMAGE</td>
+        <td class = "button" id = "functionmodebutton">FUNCTION</td>
+        <td class = "button" id = "plotmodebutton">PLOT</td>
+        <td class = "button" id = "stylemodebutton">STYLE</td>
+
     </tr>
 </table>
 
 <canvas id="mainCanvas"></canvas>
 <img id  = "pngimage" style = "display:none"/>
+<div id = "imagebox">
+    <img id = "backgroundimage"/>
+</div>
+
 <table id = "maintable">
+    <tr>
+        <td>x0:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>y0:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>g:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>G:</td><td><input></td>
+    </tr>
+</table>
+
+
+<table id = "imagetable">
+    <tr>
+        <td>xoverw:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>yoverw:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>woverw:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>angle:</td><td><input></td>
+    </tr>
 </table>
 
 <div class = "bar" id = "bar1">g</div>
 <div class = "bar" id = "bar2">G</div>
 
-<script>
-    mc = new Hammer(document.getElementById("mainCanvas"));
-    mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc.on("panleft panright panup pandown tap press", function(ev) {
-        currentjson.plotparams.x0 = ev.deltaX;
-        currentjson.plotparams.y0 = ev.deltaY;
-        redraw();
-    });    
-    
 
 
-    mc1 = new Hammer(document.getElementById("bar1"));
-    mc1.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc1.on("panleft panright panup pandown tap press", function(ev) {
-        currentjson.plotparams.g = g0*Math.pow(10,ev.deltaX/(2*innerWidth));
-        redraw();
-    });
+<div class = "bar" id = "bar3">w</div>
+<div class = "bar" id = "bar4">h</div>
 
-    mc2 = new Hammer(document.getElementById("bar2"));
-    mc2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc2.on("panleft panright panup pandown tap press", function(ev) {
-        currentjson.plotparams.G = G0*Math.pow(10,ev.deltaX/(2*innerWidth));
-        redraw();
-    });
-</script>
+<div class = "bar" id = "bar5">SCALE</div>
+<div class = "bar" id = "bar6">ANGLE</div>
+
 <style>
+body{
+    font-family:Helvetica;
+}
+.button{
+    border:solid;
+    text-align:center;
+    cursor:pointer;
+    border-radius:5px;
+}
+.button:hover{
+    background-color:green;
+}
+.button:active{
+    background-color:yellow;
+}
 .bar{
     position:absolute;
     height:80px;
     left:0px;
     right:0px;
-    border:solid;
+    border-top:solid;
     text-align:center;
     font-size:36px;
 }
@@ -55,6 +90,23 @@
 #bar2{
     bottom:0px;
 }
+#bar3{
+    bottom:80px;
+    display:none;
+}
+#bar4{
+    bottom:0px;
+    display:none;
+}
+#bar5{
+    bottom:80px;
+    display:none;
+}
+#bar6{
+    bottom:0px;
+    display:none;
+}
+
 #linktable{
     position:absolute;
     top:0px;
@@ -72,5 +124,23 @@
     left:0px;
     z-index:3;
     top:110px;
+}
+#imagetable{
+    position:absolute;
+    left:0px;
+    z-index:3;
+    top:110px;
+    display:none;
+}
+
+#imagebox{
+    position:absolute;
+    z-index:-1;
+    top:110px;
+    overflow:hidden;
+}
+#backgroundimage{
+    position:absolute;
+    
 }
 </style>

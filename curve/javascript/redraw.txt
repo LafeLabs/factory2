@@ -11,6 +11,15 @@ document.getElementById("mainCanvas").width = currentjson.plotparams.plotwidth;
 document.getElementById("mainCanvas").height = currentjson.plotparams.plotheight;
 document.getElementById("mainCanvas").style.left = (0.5*innerWidth - 0.5*currentjson.plotparams.plotwidth).toString() + "px";
 
+document.getElementById("imagebox").style.width = currentjson.plotparams.plotwidth.toString() + "px";
+document.getElementById("imagebox").style.height = currentjson.plotparams.plotheight.toString() + "px";
+document.getElementById("imagebox").style.left = (0.5*innerWidth - 0.5*currentjson.plotparams.plotwidth).toString() + "px";
+
+document.getElementById("backgroundimage").style.width =  (currentjson.image.woverw*currentjson.plotparams.plotwidth).toString() + "px";
+document.getElementById("backgroundimage").style.left =  (currentjson.image.xoverw*currentjson.plotparams.plotwidth).toString() + "px";
+document.getElementById("backgroundimage").style.top =  (currentjson.image.yoverw*currentjson.plotparams.plotwidth).toString() + "px";
+document.getElementById("backgroundimage").style.transform = "rotate(" +  (currentjson.image.angle).toString() + "deg)";
+
 
 ctx = document.getElementById("mainCanvas").getContext("2d");
 ctx.clearRect(0, 0, currentjson.plotparams.plotwidth,currentjson.plotparams.plotheight);
@@ -27,6 +36,17 @@ if(path.length>1){
 else{
     currentFile = "json/currentjson.txt";
 }
+
+inputs[0].value = currentjson.plotparams.x0;
+inputs[1].value = currentjson.plotparams.y0;
+inputs[2].value = currentjson.plotparams.g;
+inputs[3].value = currentjson.plotparams.G;
+
+
+imageinputs[0].value = currentjson.image.xoverw;
+imageinputs[1].value = currentjson.image.yoverw;
+imageinputs[2].value = currentjson.image.woverw;
+imageinputs[3].value = currentjson.image.angle;
 
 
 data = encodeURIComponent(JSON.stringify(currentjson,null, "    "));

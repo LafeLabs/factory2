@@ -1,5 +1,17 @@
+
 path = document.getElementById("pathdiv").innerHTML;
 currentjson = JSON.parse(document.getElementById("jsondatadiv").innerHTML);
+inputs = document.getElementById("maintable").getElementsByTagName("input");
+
+imageinputs = document.getElementById("imagetable").getElementsByTagName("input");
+
+document.getElementById("backgroundimage").src = currentjson.image.url;
 
 g0 = currentjson.plotparams.g;
 G0 = currentjson.plotparams.G;
+
+editmode = "plot";
+//editmode = "function";
+//editmode = "style";
+//editmode = "image";
+
