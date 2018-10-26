@@ -70,14 +70,6 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 </script>
 </head>
 <body>
-<div id = "backurldata" style = "display:none"><?php
-
-    if(isset($_GET['backlink'])){
-        echo $_GET['backlink'];
-    }
-    
-
-?></div>
 <div id = "pathdiv" style= "display:none"><?php
 
     if(isset($_GET['path'])){
@@ -107,41 +99,6 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 
 ?></div>
-
-<div id = "page">
-
-<a id = "editorlink" href = "equationeditor.php">equationeditor.php</a>
-<a id  = "uplink" href = "../">../</a>
-<a id  = "backlink" href = ""></a>
-
-<a id = "treelink" href = "tree.php">tree.php</a>
-
-<a id  = "svgindexlink" href = "svg/index.html">SVG Plots</a>
-
-<a id = "svgfeedlink" href = "svgfeed.php">svgfeed.php</a>
-
-<canvas id="mainCanvas"></canvas>
-<img id  = "pngimage" style = "display:none"/>
-
-<img id = "mainImage"/>
-
-<div id = "actionbox">Action:<input id = "actioninput"/></div>
-<div id = "inputbox">Image URL:<input id = "imgurlinput"/></div>
-
-<textarea id="textIO"></textarea> 
-
-<table id = "valuedisplaytable">
-    <tr>
-        <td id="varname"></td><td>=</td><td id = "varvalue"></td>    
-    </tr>
-    <tr>
-        <td>$\Delta$</td><td>=</td><td id = "delta"></td>    
-    </tr>
-</table>
-<table id = "plotparamstable">
-</table>
-<table id = "funcparamstable">
-</table>
 <div id = "imgurldata" style = "display:none"><?php 
 if(isset($_GET['url'])){
     $urlfilename = $_GET['url'];
@@ -151,64 +108,11 @@ if(isset($_GET['url'])){
     echo $outcode;
 }
 ?></div>
-<div id = "shadowequation" style = "display:none" class = "no-mathjax"><?php
-
-if(isset($_GET['url']) && !isset($_GET['path'])){
-    $urlfilename = $_GET['url'];
-    $svgcode = file_get_contents($_GET['url']);
-    $topcode = explode("</equation>",$svgcode)[0];
-    $outcode = explode("<equation>",$topcode)[1];
-    echo $outcode;
-    $file = fopen("html/equation.txt","w");// create new file with this name
-    fwrite($file,$outcode); //write data to file
-    fclose($file);  //close file
-}
-if(isset($_GET['url']) && isset($_GET['path'])){
-    $urlfilename = $_GET['url'];
-    $svgcode = file_get_contents($_GET['url']);
-    $topcode = explode("</equation>",$svgcode)[0];
-    $outcode = explode("<equation>",$topcode)[1];
-    echo $outcode;
-    
-    $file = fopen($_GET['path']."html/equation.txt","w");// create new file with this name
-    fwrite($file,$outcode); //write data to file
-    fclose($file);  //close file
-}
-
-
-if(isset($_GET['path']) && !isset($_GET['url'])){
-    echo file_get_contents($_GET['path']."html/equation.txt");
-}
-if(!isset($_GET['path']) && !isset($_GET['url'])){
-    echo file_get_contents("html/equation.txt");
-}
-
-
-?></div>
-<div id = "equation">
 <?php
 
-if(isset($_GET['url'])){
-    $urlfilename = $_GET['url'];
-    $svgcode = file_get_contents($_GET['url']);
-    $topcode = explode("</equation>",$svgcode)[0];
-    $outcode = explode("<equation>",$topcode)[1];
-    echo $outcode;
-}
-if(isset($_GET['path'])){
-    echo file_get_contents($_GET['path']."html/equation.txt");
-}
-if(!isset($_GET['path']) && !isset($_GET['url'])){
-    echo file_get_contents("html/equation.txt");
-}
+echo file_get_contents("html/page.txt");
 
 ?>
-</div>
-    <div class = "button" id = "publish">PUBLISH</div>
-    <div class = "button" id = "pngbutton">PNG</div>
-</div>
-<script>
-</script>
 <script id = "init">
 init();
 function init(){
@@ -233,11 +137,5 @@ function init(){
     echo $data;    
 ?>
 </script>
-<?php
-    echo "<style>\n";
-    $data = file_get_contents("css/style.txt");
-    echo $data;
-    echo "</style>\n";
-?>
 </body>
 </html>

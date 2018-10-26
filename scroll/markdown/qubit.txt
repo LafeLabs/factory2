@@ -1,0 +1,51 @@
+# Quantum HTML
+
+
+
+Consider the space spanned by a set of qubits.  The goal of this work is to describe a class of maps from the Hilbert space of these qubits into the space of potential web pages, using a combination of CSS, HTML, JavaScript and x3d(formerly known as VRML).  For the purpose of this work we ignore quantum computing and simply build maps for user interface, input and output both.
+
+Begin with a two qubit system.  All possible states of the system may be described in the form
+
+$$
+\psi= \alpha_0\left|00\right> + \alpha_1\left|01\right> + \alpha_2\left|10\right> + \alpha_3\left|11\right>, 
+$$
+
+where 
+
+$$\sum_{i=0}^3 \left|\alpha_i\right|^2 = 1.$$
+
+We consider the phase of the ground state to be zero(removing an arbitrary global phase), and write this in terms of real magnitudes $a_i$ as 
+
+$$
+\psi= a_0\left|00\right> + e^{i\phi_0}a_1\left|01\right> + e^{i\phi_1}a_2\left|10\right> + e^{i\phi_2}a_3\left|11\right>, 
+$$
+
+and the real amplitudes also follow
+
+$$
+\sum_{i=0}^3 a_i^2 = 1
+$$
+
+which describes a 3-sphere, or the set of all points equidistant from a center in four dimensional Euclidian space.  This space can be parameterized by 3 angular variables, $\theta_0, \theta_1, \theta_2$.  As physicists, perhaps this doesn't have any physical meaning, perhaps it does.  This is, however, not the point.  The point is to create a geometric handle we can use to build a map into HTML.  That handle consists of the three angular variables describing coordinates on the 3-sphere, the three phases, and the four probabilities which are the squares of the "a".
+
+Before using these variables to build weird art in HTML, we state how the three sphere is parameteri zed in angles. 
+
+$$a_0 = \cos{\theta_0}$$
+$$a_1 = \cos{\theta_1}\sin{\theta_0}$$
+$$a_2 = \cos{\theta_2}\sin{\theta_1}\sin{\theta_0}$$
+$$a_3 = \sin{\theta_2}\sin{\theta_1}\sin{\theta_0}.$$
+
+We start our journey into HTML art by considering the CSS version, in which it is reasonable to map the square of each a value to opacity, since both are in the range from 0 to 1, for four objects.  The three phases correspond to rotations of three of the HTML objects.  This can consist of four images, which can be on top of each other, and aligned for artistic effect.  
+
+The x3d/VRML version is to consider four 3d objects in a chain, with each one touching the edge of the next.  Each object is scaled in size by the relevant squared magnitude. As we go down the chain, each link is rotate on two angles, and those are the phase angle and the 3-sphere angle.  This 3d model can be generalized to an arbitrary number of qubits.  The objects being scaled in VRML can be anything that clearly shows angle and is easy to see. The rotations can be discretized using Geometron, and this can be both an input and output device, as the state of the quantum processor is linked in real time to the web browser VRML interface.  Many subspaces of the global Hilbert space can be mapped to many web browsers with many users for a multiplexed user interface, where many users simultaneously both control and observe variables in the quantum processor.  
+
+
+The task before the programmer of this machine is then to map problems into the geometry of the models in the browser, then build up a system in the quantum processor to interact with the problem and solve it. In this model, the "programmers" of the quantum "computer" are not writing programs to do a math problem so much as using the information space spanned by the qubits in the processor to explore the parameter space of some problem and approach the solution by intuition.  In this model, the quantum "computer" is in fact an art machine which allows groups of people to work in a geometric space with massive parallelism.  
+
+There are two obvious places where this might be useful.  One is in quantum chemistry, where our goal is to map 3d models of atoms to 3d models of qubits.  The other is integer factorization, where rotation symmetry groups of the various angles map to prime factors.  
+
+
+
+
+
+

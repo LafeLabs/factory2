@@ -21,6 +21,8 @@
 <div id = "filescroll">
 
     <div class = "html file">html/equation.txt</div>
+    <div class = "html file">html/page.txt</div>
+
     <div class = "css file">css/style.txt</div>
 
     <div class = "javascript file">javascript/topfunctions.txt</div>
