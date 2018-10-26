@@ -28,6 +28,9 @@
         if(editmode == "image"){
             currentjson.image.woverw = Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
+        if(editmode == "style"){
+            currentjson.plotparams.plotwidth = w0 + ev.deltaX;
+        }
         redraw();
     });
 
@@ -40,6 +43,10 @@
         if(editmode == "image"){
             currentjson.image.angle = 360*ev.deltaX/(0.25*innerWidth);
         }
+        if(editmode == "style"){
+            currentjson.plotparams.plotheight = h0 + ev.deltaX;
+        }
+
         redraw();
     });
     
@@ -88,11 +95,35 @@
         redraw();
     }
 
+
+    styleinputs[0].onchange = function(){
+        currentjson.plotparams.plotwidth = parseInt(this.value);
+        w0 = parseInt(this.value);
+        redraw();
+    }
+    styleinputs[1].onchange = function(){
+        currentjson.plotparams.plotheight = parseInt(this.value);
+        h0 = parseInt(this.value);
+        redraw();
+    }
+    styleinputs[2].onchange = function(){
+        currentjson.style.linewidth = parseInt(this.value);
+        redraw();
+    }
+    styleinputs[3].onchange = function(){
+        currentjson.style.color = this.value;
+        h0 = parseInt(this.value);
+        redraw();
+    }
+    
+
     document.getElementById("imagemodebutton").onclick = function(){
         editmode = "image";
         document.getElementById("maintable").style.display = "none";
         document.getElementById("imagetable").style.display = "block";
         document.getElementById("functiontable").style.display = "none";
+        document.getElementById("styletable").style.display = "none";
+
         document.getElementById("bar1").innerHTML = "SCALE";
         document.getElementById("bar2").innerHTML = "ANGLE";
 
@@ -102,6 +133,7 @@
         document.getElementById("maintable").style.display = "block";
         document.getElementById("imagetable").style.display = "none";
         document.getElementById("functiontable").style.display = "none";
+        document.getElementById("styletable").style.display = "none";
 
         document.getElementById("bar1").innerHTML = "g";
         document.getElementById("bar2").innerHTML = "G";
@@ -112,9 +144,21 @@
         document.getElementById("maintable").style.display = "none";
         document.getElementById("imagetable").style.display = "none";
         document.getElementById("functiontable").style.display = "block";
+        document.getElementById("styletable").style.display = "none";
 
         document.getElementById("bar1").innerHTML = "";
         document.getElementById("bar2").innerHTML = "";
+
+    }
+    document.getElementById("stylemodebutton").onclick = function(){
+        editmode = "style";
+        document.getElementById("maintable").style.display = "none";
+        document.getElementById("imagetable").style.display = "none";
+        document.getElementById("functiontable").style.display = "none";
+        document.getElementById("styletable").style.display = "block";
+
+        document.getElementById("bar1").innerHTML = "WIDTH";
+        document.getElementById("bar2").innerHTML = "HEIGHT";
 
     }
     

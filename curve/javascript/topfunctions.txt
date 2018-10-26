@@ -1,8 +1,11 @@
+//put helper functions here, along with contsants and variables
+
+
 function YofX(){
     
-    X = currentjson.plotparams.g*(x - currentjson.plotparams.x0) - currentjson.funcparams.X0;
+    X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
     eval(currentjson.YofXstring);
-    y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y - currentjson.funcparams.Y0);
+    y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 
 }
 

@@ -10,7 +10,7 @@
     "y0": 399,
     "x0rel": 0,
     "y0rel": 0,
-    "glyph": "0226,0330,0226,0333,0226,",
+    "glyph": "0226,0330,0226,0333,0226,0337,0337,0341,0336,0341,0336,0341,0341,0336,0341,",
     "table": [
         "0220:0304,0313,0210,0210,0336,0333,0331,0337,0204,0336,0330,0332,0337,0211,0211,",
         "0221:0304,0313,0330,0220,",
@@ -68,4 +68,9 @@
     <circle cx="70" cy = "70" r = "49.58677685950412" stroke = "black" stroke-width = "6" fill = "none" />
     <circle cx="70" cy = "20" r = "49.58677685950412" stroke = "black" stroke-width = "6" fill = "none" />
     <circle cx="120" cy = "20" r = "49.58677685950412" stroke = "black" stroke-width = "6" fill = "none" />
+    <circle cx="120" cy = "20" r = "198.34710743801648" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="120" cy = "20" r = "99.17355371900824" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="120" cy = "20" r = "49.58677685950412" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="120" cy = "20" r = "49.58677685950412" stroke = "black" stroke-width = "3" fill = "none" />
+    <circle cx="120" cy = "20" r = "24.79338842975206" stroke = "black" stroke-width = "3" fill = "none" />
 </svg>

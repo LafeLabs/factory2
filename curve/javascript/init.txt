@@ -8,13 +8,20 @@ imageinputs[4].value = currentjson.image.url;
 
 functioninputs = document.getElementById("functiontable").getElementsByTagName("input");
 functioninputs[0].value = currentjson.YofXstring;
-functioninputs[1].value = currentjson.funcparams.X0;
-functioninputs[2].value = currentjson.funcparams.Y0;
+
+styleinputs = document.getElementById("styletable").getElementsByTagName("input");
+styleinputs[0].value = currentjson.plotparams.plotwidth.toString();
+styleinputs[1].value = currentjson.plotparams.plotheight.toString();
+styleinputs[2].value = currentjson.style.linewidth.toString();
+styleinputs[3].value = currentjson.style.color;
 
 document.getElementById("backgroundimage").src = currentjson.image.url;
 
 g0 = currentjson.plotparams.g;
 G0 = currentjson.plotparams.G;
+w0 = currentjson.plotparams.plotwidth;
+h0 = currentjson.plotparams.plotheight;
+
 
 editmode = "plot";
 //editmode = "function";

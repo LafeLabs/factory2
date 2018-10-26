@@ -30,8 +30,6 @@
     <div class = "javascript file">javascript/redraw.txt</div>
     <div class = "javascript file">javascript/pageevents.txt</div>
 
-    <div class = "javascript file">javascript/YofX.txt</div>
-
     <div class = "php file">php/index.txt</div>
     <div class = "php file">php/editor.txt</div>
     <div class = "php file">php/filesaver.txt</div>

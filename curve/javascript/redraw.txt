@@ -48,6 +48,9 @@ imageinputs[1].value = currentjson.image.yoverw;
 imageinputs[2].value = currentjson.image.woverw;
 imageinputs[3].value = currentjson.image.angle;
 
+styleinputs[0].value = currentjson.plotparams.plotwidth.toString();
+styleinputs[1].value = currentjson.plotparams.plotheight.toString();
+
 
 data = encodeURIComponent(JSON.stringify(currentjson,null, "    "));
 var httpc = new XMLHttpRequest();

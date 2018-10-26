@@ -7,6 +7,11 @@
         <td class = "button" id = "functionmodebutton">FUNCTION</td>
         <td class = "button" id = "plotmodebutton">PLOT</td>
         <td class = "button" id = "stylemodebutton">STYLE</td>
+        <td class = "button">TREE</td>
+        <td class = "button">SVGFEED</td>
+        <td class = "button">MARKDOWNFEED</td>
+        <td class = "button">FACTORY</td>
+        <td class = "button" id = "savebutton">SAVE</td>
 
     </tr>
 </table>
@@ -56,12 +61,22 @@
     <tr>
         <td>YofX:</td><td><input></td>
     </tr>
+</table>
+
+<table id = "styletable">
     <tr>
-        <td>X0:</td><td><input></td>
+        <td>Width:</td><td><input></td>
     </tr>
     <tr>
-        <td>Y0:</td><td><input></td>
+        <td>Width:</td><td><input></td>
     </tr>
+    <tr>
+        <td>Linewidth:</td><td><input></td>
+    </tr>
+    <tr>
+        <td>Color:</td><td><input></td>
+    </tr>
+
 </table>
 
 <div class = "bar" id = "bar1">g</div>
@@ -142,6 +157,13 @@ body{
     display:none;
 }
 #functiontable{
+    position:absolute;
+    left:0px;
+    z-index:3;
+    top:110px;
+    display:none;
+}
+#styletable{
     position:absolute;
     left:0px;
     z-index:3;
