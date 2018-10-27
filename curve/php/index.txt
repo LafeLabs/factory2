@@ -57,6 +57,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+<!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>
 	MathJax.Hub.Config({
@@ -68,6 +69,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 		}
 	});//			MathJax.Hub.Typeset();//tell Mathjax to update the math
 </script>
+-->
 </head>
 <body>
 <div id = "pathdiv" style= "display:none"><?php
@@ -99,14 +101,22 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 
 ?></div>
-<div id = "imgurldata" style = "display:none"><?php 
-if(isset($_GET['url'])){
-    $urlfilename = $_GET['url'];
-    $svgcode = file_get_contents($_GET['url']);
-    $topcode = explode("</imgurl>",$svgcode)[0];
-    $outcode = explode("<imgurl>",$topcode)[1];
-    echo $outcode;
-}
+<div id = "equationdata" style = "display:none"><?php
+
+    if(isset($_GET['url'])){
+        $urlfilename = $_GET['url'];
+        $svgcode = file_get_contents($_GET['url']);
+        $topcode = explode("</equation>",$svgcode)[0];
+        $outcode = explode("<equation>",$topcode)[1];
+        echo $outcode;
+    }
+    if(isset($_GET['path'])){
+        echo file_get_contents("curves/".$_GET['path']."markdown/equation.txt");
+    }
+    if(!isset($_GET['path']) && !isset($_GET['url'])){
+        echo file_get_contents("markdown/equation.txt");
+    }
+
 ?></div>
 <?php
 

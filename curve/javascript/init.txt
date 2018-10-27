@@ -33,6 +33,15 @@ G0 = currentjson.plotparams.G;
 w0 = currentjson.plotparams.plotwidth;
 h0 = currentjson.plotparams.plotheight;
 
+
+if(currentjson.A != undefined){
+    A = currentjson.A;
+}
+if(currentjson.B != undefined){
+    B = currentjson.B;
+}
+A0=A;
+B0=B;
 editmode = "plot";
 //editmode = "function";
 //editmode = "style";

@@ -5,7 +5,7 @@ currentSVG = "<svg width=\"" + currentjson.plotparams.plotwidth.toString() + "\"
 currentSVG += "\n<!--\n<topfunctions>\n" + document.getElementById("topfunctions").innerText + "\n</topfunctions>\n-->\n";
 currentSVG += "\n<!--\n<currentjson>\n" + JSON.stringify(currentjson,null, "    ") + "\n</currentjson>\n-->\n";
 
-
+currentSVG += "\n<!--\n<equation>\n" + document.getElementById("equationdata").innerHTML + "\n</equation>\n-->\n";
 
 document.getElementById("mainCanvas").width = currentjson.plotparams.plotwidth;
 document.getElementById("mainCanvas").height = currentjson.plotparams.plotheight;
@@ -53,7 +53,8 @@ styleinputs[1].value = currentjson.plotparams.plotheight.toString();
 
 functioninputs[0].value = A;
 functioninputs[1].value = B;
-
+currentjson.A = A;
+currentjson.B = B;
 
 data = encodeURIComponent(JSON.stringify(currentjson,null, "    "));
 var httpc = new XMLHttpRequest();

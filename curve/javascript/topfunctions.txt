@@ -2,7 +2,7 @@
 function YofX(){
     X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
 
-    Y = Math.exp(-X/100)*(Math.sin(X));
+    Y = Math.exp(-X/A)*(Math.sin(X));
 
     y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 }

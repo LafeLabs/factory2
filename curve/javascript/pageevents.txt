@@ -32,7 +32,7 @@
             currentjson.plotparams.plotwidth = w0 + ev.deltaX;
         }
         if(editmode == "function"){
-            A = Math.pow(10,ev.deltaX/(0.5*innerWidth));
+            A = A0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
         redraw();
     });
@@ -50,7 +50,7 @@
             currentjson.plotparams.plotheight = h0 + ev.deltaX;
         }
         if(editmode == "function"){
-            B = Math.pow(10,ev.deltaX/(0.5*innerWidth));
+            B = B0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
 
         redraw();
@@ -99,10 +99,13 @@
     
     functioninputs[0].onchange = function(){
         A = this.value;
+        A0=A;
+        
         redraw();
     }
-    functioninputs[0].onchange = function(){
+    functioninputs[1].onchange = function(){
         B = this.value;
+        B0=B;
         redraw();
     }
 
@@ -203,6 +206,7 @@
         }
         else{
             httpc.send("data=" + data + "&filename=svg/svg" + timestamp + ".svg");//send text to filesaver.php
+            path = "";
         }
 
         var httpc = new XMLHttpRequest();
