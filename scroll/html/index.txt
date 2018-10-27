@@ -7,6 +7,9 @@
         <td><a href = "../symbol/svg2markdown.php">
             <img style = "width:80px;" src = "icons/symbol.svg"/>
         </a></td>
+        <td><a href = "../curve/markdownfeed.php">
+            <img style = "width:80px;" src = "icons/curve.svg"/>
+        </a></td>
         <td><a href = "../uploader/markdownlinks.php">
             <img style = "width:80px;" src = "../symbols/upload.svg"/>
         </a></td>

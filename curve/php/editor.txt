@@ -14,7 +14,10 @@
     <a href = "treednagenerator.php">treednagenerator.php</a>
     <a href = "dnagenerator.php">dnagenerator.php</a>
     <a href = "tree.php">tree.php</a>
-
+    <a href = "markdownfeed.php">markdownfeed.php</a>
+    <a href = "functioneditor.php">functioneditor.php</a>
+    <a href = "scrolleditor.php">scrolleditor.php</a>
+    
 </div>
 <div id = "namediv"></div>
 <div id="maineditor" contenteditable="true" spellcheck="false"></div>
@@ -36,6 +39,9 @@
     <div class = "php file">php/equationeditor.txt</div>
     <div class = "php file">php/text2php.txt</div>
     <div class = "php file">php/markdownfeed.txt</div>
+
+    <div class = "php file">php/functioneditor..txt</div>
+    <div class = "php file">php/scrolleditor.txt</div>
 
     <div class = "php file">php/svgfeed.txt</div>
 

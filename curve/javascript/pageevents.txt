@@ -126,7 +126,11 @@
 
         document.getElementById("bar1").innerHTML = "SCALE";
         document.getElementById("bar2").innerHTML = "ANGLE";
-
+        
+        this.style.backgroundColor = "#a0ffa0";
+        document.getElementById("plotmodebutton").style.backgroundColor = "white";
+        document.getElementById("functionmodebutton").style.backgroundColor = "white";
+        document.getElementById("stylemodebutton").style.backgroundColor = "white";
     }
     document.getElementById("plotmodebutton").onclick = function(){
         editmode = "plot";
@@ -137,6 +141,10 @@
 
         document.getElementById("bar1").innerHTML = "g";
         document.getElementById("bar2").innerHTML = "G";
+        this.style.backgroundColor = "#a0ffa0";
+        document.getElementById("imagemodebutton").style.backgroundColor = "white";
+        document.getElementById("functionmodebutton").style.backgroundColor = "white";
+        document.getElementById("stylemodebutton").style.backgroundColor = "white";
 
     }
     document.getElementById("functionmodebutton").onclick = function(){
@@ -148,6 +156,10 @@
 
         document.getElementById("bar1").innerHTML = "";
         document.getElementById("bar2").innerHTML = "";
+        this.style.backgroundColor = "#a0ffa0";
+        document.getElementById("imagemodebutton").style.backgroundColor = "white";
+        document.getElementById("plotmodebutton").style.backgroundColor = "white";
+        document.getElementById("stylemodebutton").style.backgroundColor = "white";
 
     }
     document.getElementById("stylemodebutton").onclick = function(){
@@ -159,11 +171,29 @@
 
         document.getElementById("bar1").innerHTML = "WIDTH";
         document.getElementById("bar2").innerHTML = "HEIGHT";
+        this.style.backgroundColor = "#a0ffa0";
+        document.getElementById("imagemodebutton").style.backgroundColor = "white";
+        document.getElementById("functionmodebutton").style.backgroundColor = "white";
+        document.getElementById("plotmodebutton").style.backgroundColor = "white";
 
     }
     
     document.getElementById("savebutton").onclick = function(){
         
+        data = encodeURIComponent(currentSVG);
+        timestamp = Math.round((new Date().getTime())/1000);
+        var httpc = new XMLHttpRequest();
+        var url = "filesaver.php";        
+        httpc.open("POST", url, true);
+        httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+        
+        if(path.length>1){
+            httpc.send("data=" + data + "&filename=curves/" + path + "svg/svg" + timestamp + ".svg");//send text to filesaver.php
+        }
+        else{
+            httpc.send("data=" + data + "&filename=svg/svg" + timestamp + ".svg");//send text to filesaver.php
+        }
+
     }
     
     

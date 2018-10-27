@@ -47,7 +47,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
         fclose($file);  //close file
     }
     if(isset($_GET['path']) && !isset($_GET['url'])){
-        echo file_get_contents($_GET['path']."javascript/topfunctions.txt");
+        echo file_get_contents("curves/".$_GET['path']."javascript/topfunctions.txt");
     }
     if(!isset($_GET['path']) && !isset($_GET['url'])){
         echo file_get_contents("javascript/topfunctions.txt");
@@ -56,7 +56,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 ?>
 
 </script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <script>
 	MathJax.Hub.Config({
@@ -91,7 +91,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
         echo $outcode;
     }
     if(isset($_GET['path']) && !isset($_GET['url'])){
-        echo file_get_contents($_GET['path']."json/currentjson.txt");
+        echo file_get_contents("curves/".$_GET['path']."json/currentjson.txt");
     }
     if(!isset($_GET['path']) && !isset($_GET['url'])){
         echo file_get_contents("json/currentjson.txt");

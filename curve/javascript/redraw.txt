@@ -31,7 +31,7 @@ currentSVG += "</svg>";
 
 
 if(path.length>1){
-    currentFile = path + "json/currentjson.txt";
+    currentFile = "curves/"+path + "json/currentjson.txt";
 }
 else{
     currentFile = "json/currentjson.txt";
@@ -65,7 +65,7 @@ var url = "filesaver.php";
 httpc2.open("POST", url, true);
 httpc2.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
 if(path.length>1){
-    httpc2.send("data="+data2+"&filename="+path+"currentsvg.svg");//send text to filesaver.php
+    httpc2.send("data="+data2+"&filename=curves/"+path+"currentsvg.svg");//send text to filesaver.php
 }
 else{
     httpc2.send("data="+data2+"&filename="+"currentsvg.svg");//send text to filesaver.php

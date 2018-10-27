@@ -17,6 +17,7 @@ styleinputs[3].value = currentjson.style.color;
 
 document.getElementById("backgroundimage").src = currentjson.image.url;
 
+
 g0 = currentjson.plotparams.g;
 G0 = currentjson.plotparams.G;
 w0 = currentjson.plotparams.plotwidth;
@@ -27,4 +28,9 @@ editmode = "plot";
 //editmode = "function";
 //editmode = "style";
 //editmode = "image";
+
+document.getElementById("plotmodebutton").style.backgroundColor = "#a0ffa0";
+document.getElementById("imagemodebutton").style.backgroundColor = "white";
+document.getElementById("functionmodebutton").style.backgroundColor = "white";        
+document.getElementById("stylemodebutton").style.backgroundColor = "white";
 

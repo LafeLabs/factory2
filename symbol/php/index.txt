@@ -26,6 +26,7 @@ EGO DEATH:
 
 <script id = "bytecodeScript">/*
 <?php
+
 echo file_get_contents("bytecode/baseshapes.txt")."\n";
 echo file_get_contents("bytecode/shapetable.txt")."\n";
 echo file_get_contents("bytecode/font.txt")."\n";
