@@ -4,13 +4,14 @@
             <a href = "editor.php"><img src = "../symbols/editor.svg"></a>
         </td>
         <td class = "button" id = "imagemodebutton"><img src = "icons/image.svg"></td>
-        <td class = "button" id = "functionmodebutton"><img src = "icons/function.svg"></td>
+        <td class = "button" id = "functionmodebutton"><img src = "icons/ab.svg"></td>
         <td class = "button" id = "plotmodebutton"><img src = "icons/plot.svg"></td>
         <td class = "button" id = "stylemodebutton"><img src = "icons/style.svg"></td>
         <td><a href = "tree.php"><img src = "../symbol/icons/tree.svg"></a></td>
-        <td><a href = "svgfeed.php"><img src = "../symbol/icons/svgfeed.svg"></a></td>
-        <td><a href = "markdownfeed.php"><img src = "../symbols/markdown.svg"></a></td>
+        <td><a id = "svglink" href = "svgfeed.php"><img src = "../symbol/icons/svgfeed.svg"></a></td>
+        <td><a id = "markdownlink" href = "markdownfeed.php"><img src = "../symbols/markdown.svg"></a></td>
         <td><a href = "../"><img src = "../symbol/icons/factory.svg"></a></td>
+        <td><a id = "funclink" href = "functioneditor.php"><img src = "icons/function.svg"></a></td>
         <td class = "button" id = "savebutton"><img src = "icons/file.svg"></td>
     </tr>
 </table>
@@ -58,8 +59,12 @@
 
 <table id = "functiontable">
     <tr>
-        <td>YofX:</td><td><input></td>
+        <td>A:</td><td><input></td>
     </tr>
+    <tr>
+        <td>B:</td><td><input></td>
+    </tr>
+
 </table>
 
 <textarea id = "functioneditor"></textarea>

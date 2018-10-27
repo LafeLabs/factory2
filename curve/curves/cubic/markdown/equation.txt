@@ -1,0 +1,5 @@
+# Equations
+$$X = g(x - x_0)$$
+$$Y = X^3 - \frac{3}{2}X
+^2$$
+$$y = y_0 - GY$$ 

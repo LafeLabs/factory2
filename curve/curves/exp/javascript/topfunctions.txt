@@ -4,7 +4,7 @@
 function YofX(){
     
     X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
-    eval(currentjson.YofXstring);
+    Y = Math.exp(-X);
     y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 
 }

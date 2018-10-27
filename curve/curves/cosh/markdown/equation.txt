@@ -1,0 +1,4 @@
+# Equations
+$$X = g(x - x_0)$$
+$$Y = \cosh{(X)}$$
+$$y = y_0 - GY$$ 

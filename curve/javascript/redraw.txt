@@ -51,6 +51,9 @@ imageinputs[3].value = currentjson.image.angle;
 styleinputs[0].value = currentjson.plotparams.plotwidth.toString();
 styleinputs[1].value = currentjson.plotparams.plotheight.toString();
 
+functioninputs[0].value = A;
+functioninputs[1].value = B;
+
 
 data = encodeURIComponent(JSON.stringify(currentjson,null, "    "));
 var httpc = new XMLHttpRequest();

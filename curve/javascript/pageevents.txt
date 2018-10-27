@@ -31,6 +31,9 @@
         if(editmode == "style"){
             currentjson.plotparams.plotwidth = w0 + ev.deltaX;
         }
+        if(editmode == "function"){
+            A = Math.pow(10,ev.deltaX/(0.5*innerWidth));
+        }
         redraw();
     });
 
@@ -45,6 +48,9 @@
         }
         if(editmode == "style"){
             currentjson.plotparams.plotheight = h0 + ev.deltaX;
+        }
+        if(editmode == "function"){
+            B = Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
 
         redraw();
@@ -90,8 +96,13 @@
         document.getElementById("backgroundimage").src = currentjson.image.url;
         redraw();
     }
+    
     functioninputs[0].onchange = function(){
-        currentjson.YofXstring = this.value;
+        A = this.value;
+        redraw();
+    }
+    functioninputs[0].onchange = function(){
+        B = this.value;
         redraw();
     }
 
@@ -154,8 +165,8 @@
         document.getElementById("functiontable").style.display = "block";
         document.getElementById("styletable").style.display = "none";
 
-        document.getElementById("bar1").innerHTML = "";
-        document.getElementById("bar2").innerHTML = "";
+        document.getElementById("bar1").innerHTML = "A";
+        document.getElementById("bar2").innerHTML = "B";
         this.style.backgroundColor = "#a0ffa0";
         document.getElementById("imagemodebutton").style.backgroundColor = "white";
         document.getElementById("plotmodebutton").style.backgroundColor = "white";
@@ -193,6 +204,12 @@
         else{
             httpc.send("data=" + data + "&filename=svg/svg" + timestamp + ".svg");//send text to filesaver.php
         }
+
+        var httpc = new XMLHttpRequest();
+        var url = "listupdate.php";        
+        httpc.open("POST", url, true);
+        httpc.setRequestHeader("Content-Type", "application/x-www-form-urlencoded;charset=utf-8");
+        httpc.send("path=" + path);//send text to listupdate.php
 
     }
     

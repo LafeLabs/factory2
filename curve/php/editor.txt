@@ -40,13 +40,14 @@
     <div class = "php file">php/text2php.txt</div>
     <div class = "php file">php/markdownfeed.txt</div>
 
-    <div class = "php file">php/functioneditor..txt</div>
+    <div class = "php file">php/functioneditor.txt</div>
     <div class = "php file">php/scrolleditor.txt</div>
 
     <div class = "php file">php/svgfeed.txt</div>
 
     <div class = "php file">php/tree.txt</div>
     <div class = "php file">php/newdir.txt</div>
+    <div class = "php file">php/listupdate.txt</div>
 
     <div class = "php file">php/treednagenerator.txt</div>
     <div class = "php file">php/treereplicator.txt</div>

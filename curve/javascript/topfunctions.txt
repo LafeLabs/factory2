@@ -1,17 +1,10 @@
 
-
-
-
-
-
-
 function YofX(){
-//foobar foobar
-    X = plotparams.g*(x - plotparams.x0) - funcparams.X0;
+    X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
 
-    Y = Math.sin(X);
+    Y = Math.exp(-X/100)*(Math.sin(X));
 
-    y = plotparams.y0 - plotparams.G*(Y - funcparams.Y0);
+    y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 }
 
 
@@ -21,7 +14,7 @@ function YofX(){
 function plotfunction(){
     
     /*plot one function:*/
-    currentStroke = "blue";
+    currentStroke = "red";
     currentLineWidth = 4;
     ctx.strokeStyle = currentStroke;
     ctx.lineWidth = currentLineWidth;
@@ -32,7 +25,7 @@ function plotfunction(){
     currentSVG += "	<path d = \"M";
     currentSVG += Math.round(x).toString() + " ";
     currentSVG += Math.round(y).toString() + " ";
-    for(x = 1;x < plotparams.plotwidth;x++){
+    for(x = 1;x < currentjson.plotparams.plotwidth;x++){
         ctx.moveTo(x-1,y);
         YofX();
         ctx.lineTo(x,y);

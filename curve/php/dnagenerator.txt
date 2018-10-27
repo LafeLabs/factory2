@@ -26,8 +26,6 @@ $finalstring .= getfiles("html");
 $finalstring .= ",\n";
 $finalstring .= getfiles("json");
 $finalstring .= ",\n";
-$finalstring .= getfiles("css");
-$finalstring .= ",\n";
 $finalstring .= getfiles("javascript");
 
 $finalstring .= "\n]";

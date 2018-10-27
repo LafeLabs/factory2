@@ -8,7 +8,11 @@
 			"feedsaver.txt",
 			"fileloader.txt",
 			"filesaver.txt",
+			"functioneditor..txt",
+			"functioneditor.txt",
 			"index.txt",
+			"listupdate.txt",
+			"markdownfeed.txt",
 			"newdir.txt",
 			"replicator.txt",
 			"svgfeed.txt",
@@ -21,7 +25,8 @@
 	{
 		"path":"html",
 		"files":[
-			"equation.txt"
+			"equation.txt",
+			"page.txt"
 		]
 	},
 	{
@@ -31,12 +36,6 @@
 			"dna.txt",
 			"plotdata.txt",
 			"treedna.txt"
-		]
-	},
-	{
-		"path":"css",
-		"files":[
-			"style.txt"
 		]
 	},
 	{

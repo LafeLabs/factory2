@@ -1,19 +1,19 @@
 {
     "constants": {},
-    "YofXstring": "Y = Math.sin((Math.PI*2*X));     if(Y>= 0){         Y = 1;     }     else{         Y = -1     }",
+    "YofXstring": "",
     "style": {
         "linewidth": 4,
         "color": "blue",
         "fill": "none"
     },
     "plotparams": {
-        "G": 18.268206260053894,
-        "g": 0.026544625844180117,
+        "G": 59.14660544591749,
+        "g": 0.01832980710832436,
         "duration": 450.78888054094654,
         "plotwidth": 500,
         "plotheight": 500,
-        "x0": 11,
-        "y0": 299
+        "x0": 46,
+        "y0": 242
     },
     "funcparams": {},
     "image": {

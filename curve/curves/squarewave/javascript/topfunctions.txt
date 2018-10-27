@@ -4,7 +4,15 @@
 function YofX(){
     
     X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
-    eval(currentjson.YofXstring);
+
+    Y = Math.sin((Math.PI*2*X));     
+    if(Y>= 0){         
+        Y = 1;     
+        
+    }     
+    else{         
+        Y = -1;     
+    }
     y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 
 }
