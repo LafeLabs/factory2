@@ -7,7 +7,7 @@ function getfiles($localpath){
     
     foreach($files as $value){
         if($value != "." && $value != ".."){
-            if(substr($value,-4) == ".txt"){
+            if(substr($value,-4) == ".txt" || substr($value,-4) == ".svg"){
                 $outstring .= "\t\t\t\"".$value."\",\n";
             }
         }
@@ -23,6 +23,8 @@ $finalstring = "[\n";
 $finalstring .= getfiles("php");
 $finalstring .= ",\n";
 $finalstring .= getfiles("html");
+$finalstring .= ",\n";
+$finalstring .= getfiles("icons");
 $finalstring .= ",\n";
 $finalstring .= getfiles("json");
 $finalstring .= ",\n";

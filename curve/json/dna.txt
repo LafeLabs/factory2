@@ -30,6 +30,23 @@
 		]
 	},
 	{
+		"path":"icons",
+		"files":[
+			"ab.svg",
+			"copy.svg",
+			"curve.svg",
+			"editor.svg",
+			"factory.svg",
+			"file.svg",
+			"function.svg",
+			"image.svg",
+			"plot.svg",
+			"style.svg",
+			"svgfeed.svg",
+			"tree.svg"
+		]
+	},
+	{
 		"path":"json",
 		"files":[
 			"currentjson.txt",
