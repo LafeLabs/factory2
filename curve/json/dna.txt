@@ -47,6 +47,12 @@
 		]
 	},
 	{
+		"path":"markdown",
+		"files":[
+			"equation.txt"
+		]
+	},
+	{
 		"path":"json",
 		"files":[
 			"currentjson.txt",

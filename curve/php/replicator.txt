@@ -10,6 +10,7 @@
     mkdir("icons");
     mkdir("curves");
     mkdir("javascript");
+    mkdir("markdown");
     mkdir("php");
     mkdir("json");
     mkdir("svg");
