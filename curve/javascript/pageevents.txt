@@ -2,7 +2,7 @@
 
     mc = new Hammer(document.getElementById("mainCanvas"));
     mc.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc.on("panleft panright panup pandown tap press", function(ev) {
+    mc.on("panleft panright panup pandown ", function(ev) {
         
         if(editmode == "plot"){
             currentjson.plotparams.x0 = ev.deltaX;
@@ -21,7 +21,7 @@
 
     mc1 = new Hammer(document.getElementById("bar1"));
     mc1.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc1.on("panleft panright panup pandown tap press", function(ev) {
+    mc1.on("panleft panright", function(ev) {
         if(editmode == "plot"){
             currentjson.plotparams.g = g0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
@@ -36,7 +36,7 @@
 
     mc2 = new Hammer(document.getElementById("bar2"));
     mc2.get('pan').set({ direction: Hammer.DIRECTION_ALL });
-    mc2.on("panleft panright panup pandown tap press", function(ev) {
+    mc2.on("panleft panright", function(ev) {
         if(editmode == "plot"){
             currentjson.plotparams.G = G0*Math.pow(10,ev.deltaX/(0.5*innerWidth));
         }
@@ -160,6 +160,10 @@
         document.getElementById("bar1").innerHTML = "WIDTH";
         document.getElementById("bar2").innerHTML = "HEIGHT";
 
+    }
+    
+    document.getElementById("savebutton").onclick = function(){
+        
     }
     
     

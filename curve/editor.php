@@ -23,8 +23,6 @@
     <div class = "html file">html/equation.txt</div>
     <div class = "html file">html/page.txt</div>
 
-    <div class = "css file">css/style.txt</div>
-
     <div class = "javascript file">javascript/topfunctions.txt</div>
     <div class = "javascript file">javascript/init.txt</div>
     <div class = "javascript file">javascript/redraw.txt</div>
@@ -37,6 +35,7 @@
     <div class = "php file">php/feedsaver.txt</div>
     <div class = "php file">php/equationeditor.txt</div>
     <div class = "php file">php/text2php.txt</div>
+    <div class = "php file">php/markdownfeed.txt</div>
 
     <div class = "php file">php/svgfeed.txt</div>
 

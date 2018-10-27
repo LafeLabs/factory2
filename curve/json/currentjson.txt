@@ -1,26 +1,26 @@
 {
     "constants": {},
-    "YofXstring": "Y = X/Math.tanh(X) - 0.5",
+    "YofXstring": "Y =  (1/Math.PI)*0.5/(X*X + 0.25);",
     "style": {
-        "linewidth": 10,
-        "color": "red",
+        "linewidth": 4,
+        "color": "blue",
         "fill": "none"
     },
     "plotparams": {
-        "G": 130.02746261746327,
-        "g": 0.01202624831387794,
+        "G": 225.08117895663068,
+        "g": "0.005",
         "duration": 450.78888054094654,
-        "plotwidth": 401,
-        "plotheight": 454,
-        "x0": 208,
-        "y0": 246
+        "plotwidth": 521,
+        "plotheight": 536,
+        "x0": "240",
+        "y0": 200
     },
     "funcparams": {},
     "image": {
         "url": "https://i.imgur.com/5226cet.png",
-        "xoverw": -0.16666666666666666,
-        "yoverw": -0.3333333333333333,
-        "woverw": 1.3861584140507315,
+        "xoverw": 0.038011695906432746,
+        "yoverw": -0.08771929824561403,
+        "woverw": 0.8536631795472632,
         "angle": 88.42105263157895
     }
 }

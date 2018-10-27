@@ -1,18 +1,17 @@
 <table id = "linktable">
     <tr>
         <td>
-            <a href = "editor.php">EDITOR</a>
+            <a href = "editor.php"><img src = "../symbols/editor.svg"></a>
         </td>
-        <td class = "button" id = "imagemodebutton">IMAGE</td>
-        <td class = "button" id = "functionmodebutton">FUNCTION</td>
-        <td class = "button" id = "plotmodebutton">PLOT</td>
-        <td class = "button" id = "stylemodebutton">STYLE</td>
-        <td class = "button">TREE</td>
-        <td class = "button">SVGFEED</td>
-        <td class = "button">MARKDOWNFEED</td>
-        <td class = "button">FACTORY</td>
-        <td class = "button" id = "savebutton">SAVE</td>
-
+        <td class = "button" id = "imagemodebutton"><img src = "icons/image.svg"></td>
+        <td class = "button" id = "functionmodebutton"><img src = "icons/function.svg"></td>
+        <td class = "button" id = "plotmodebutton"><img src = "icons/plot.svg"></td>
+        <td class = "button" id = "stylemodebutton"><img src = "icons/style.svg"></td>
+        <td><a href = "tree.php"><img src = "../symbol/icons/tree.svg"></a></td>
+        <td><a href = "svgfeed.php"><img src = "../symbol/icons/svgfeed.svg"></a></td>
+        <td><a href = "markdownfeed.php"><img src = "../symbols/markdown.svg"></a></td>
+        <td><a href = "../"><img src = "../symbol/icons/factory.svg"></a></td>
+        <td class = "button" id = "savebutton"><img src = "icons/file.svg"></td>
     </tr>
 </table>
 
@@ -88,7 +87,6 @@ body{
     font-family:Helvetica;
 }
 .button{
-    border:solid;
     text-align:center;
     cursor:pointer;
     border-radius:5px;
@@ -135,7 +133,9 @@ body{
     position:absolute;
     top:0px;
     left:0px;
-    
+}
+#linktable img{
+    width:60px;
 }
 #mainCanvas{
     position:absolute;
