@@ -7,7 +7,8 @@
 
     //Seven Sources
     mkdir("html");
-    mkdir("css");
+    mkdir("icons");
+    mkdir("curves");
     mkdir("javascript");
     mkdir("php");
     mkdir("json");
