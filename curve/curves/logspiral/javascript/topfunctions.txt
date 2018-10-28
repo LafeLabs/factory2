@@ -22,8 +22,8 @@ function XYofT(){
 function plotfunction(){
     
     /*plot one function:*/
-    currentStroke = "red";
-    currentLineWidth = 4;
+    currentStroke = currentjson.style.color;
+    currentLineWidth = currentjson.style.linewidth;
     ctx.strokeStyle = currentStroke;
     ctx.lineWidth = currentLineWidth;
     ctx.beginPath();	

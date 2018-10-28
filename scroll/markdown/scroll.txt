@@ -16,4 +16,3 @@ $\cos{\theta_0}\sin{\theta_1}\cos{\theta_2}$
 
 $$\vec{F}=m\vec{a}$$
 
-![](http://localhost:8000/curve/curves/ellipse/svg/svg1540668823.svg)

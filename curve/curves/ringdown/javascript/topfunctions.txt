@@ -1,10 +1,13 @@
+
+
+
 //put helper functions here, along with contsants and variables
 
 
 function YofX(){
     
     X = currentjson.plotparams.g*(x - currentjson.plotparams.x0);
-    eval(currentjson.YofXstring);
+    Y =  Math.exp(-X/A)*Math.sin(X);
     y = currentjson.plotparams.y0 - currentjson.plotparams.G*(Y);
 
 }
@@ -35,6 +38,8 @@ function plotfunction(){
     /*finish plot one function*/
 
 }
+
+
 
 
 

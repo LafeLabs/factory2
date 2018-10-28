@@ -1,9 +1,15 @@
  <!doctype html>
 <html>
 <head>
-<title>Function Plotter</title>
+<link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAP//AP8AAAAAAP8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIiIiIiIiIiIAERAAERAAEQABEQABEQABIiIiIiIiIiIiIiIiIiIiIgAAAAAAAAAAAAAAAAAAIgAwAAAAAAIAIwMAAAAAIAAyADAAAAIAAwAAAAAAAAAAACAAMAIAAwAAAgADIAAwAAAAIAIwAwAAAAACIAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAD/8wAAf+wAAL/cAADfuwAAAAAAAHbvAAC53wAA2b8AAOZ/AAD//wAA" rel="icon" type="image/x-icon" />
+
+<title>Curve Factory</title>
+
 <!-- 
 PUBLIC DOMAIN, NO COPYRIGHTS, NO PATENTS.
+
+
+_____9 LAWS OF GEOMETRON_____:
 
 EVERYTHING IS PHYSICAL
 EVERYTHING IS FRACTAL
@@ -13,9 +19,33 @@ NO MONEY
 NO MINING
 NO PROPERY
 
-LOOK AT THE FUNGI
-LOOK AT THE INSECTS
-LANGUAGE IS HOW THE MIND PARSES REALITY
+EGO DEATH:
+    LOOK AT THE FUNGI
+    LOOK AT THE INSECTS
+    LANGUAGE IS HOW THE MIND PARSES REALITY
+
+
+no patents, trademarks, real estate, equity, debt, corporate structure, copyrights, or fixed machines
+no press
+no investors, no workers, no customers, all are participants
+no logins, no passwords
+no native code
+no app store presence
+no installs from command line
+no advertising
+no cookies other than the ones you eat
+trust all non coders, mistrust all coders
+
+
+the five Elements are:
+
+EARTH: GEOMETRON
+FIRE: JAVASCRIPT
+AIR: CSS
+WATER: HTML
+AETHER: PHP
+
+
 
 -->
 
@@ -42,7 +72,7 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
         $topcode = explode("</topfunctions>",$svgcode)[0];
         $outcode = explode("<topfunctions>",$topcode)[1];
         echo $outcode;
-        $file = fopen($_GET['path']."javascript/topfunctions.txt","w");// create new file with this name
+        $file = fopen("curves/".$_GET['path']."javascript/topfunctions.txt","w");// create new file with this name
         fwrite($file,$outcode); //write data to file
         fclose($file);  //close file
     }

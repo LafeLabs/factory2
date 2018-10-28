@@ -45,16 +45,33 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
 
 ?></div>
 
-<a id = "editorlink" href = "equationeditor.php">equationeditor.php</a>
-<a id = "indexlink" href = "index.php">index.php</a>
+<table id = "linktable">
+    <tr>
+        <td>
+            <a id = "indexlink" href = "index.php">
+                <img src = "icons/curve.svg"/>
+            </a>
+        </td>
+        <td>
+            <a href = "editor.php">
+                <img src = "icons/editor.svg"/>
+            </a>
+        </td>
+        <td>
+            <a href = "tree.php">
+                <img src = "icons/tree.svg"/>
+            </a>
+        </td>
+    </tr>
+</table>
 
 <div id = "scroll">
 <?php
 
     if(isset($_GET['path'])){
         $path = $_GET['path'];
-        $svgpath = "/".$path."svg";
-        $svgpath2 = $path."svg/";
+        $svgpath = "/curves/".$path."svg";
+        $svgpath2 = "curves/".$path."svg/";
 
     }
     else{
@@ -66,41 +83,14 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
     $svgs = array_reverse($svgs);
     foreach($svgs as $value){
         if($value != "." && $value != ".." && substr($value,-4) == ".svg"){
-            $svgcode = file_get_contents($svgpath2.$value);
-
-            $topcode = explode("</currentjson>",$svgcode)[0];
-            $outcode = explode("<currentjson>",$topcode)[1];
-            $currentjson = json_decode($outcode);
-            $width = $currentjson->plotparams->plotwidth;
-
-            
-            echo "\n<p style = \"position:relative;margin:auto;border:solid;width:".$width."px\"><a href = \"index.php?url=";
-            echo $svgpath2.$value;
-            echo "\"><img src = \"";        
-            $svgcode = file_get_contents($svgpath2.$value);
-            $topcode = explode("</imgurl>",$svgcode)[0];
-            $outcode = explode("<imgurl>",$topcode)[1];
-            if(strlen($outcode) > 4){
-                $imgurl =  trim($outcode);
+            if(isset($_GET['path'])){
+                echo "<a href = \"index.php?url=".$svgpath2.$value."&path=".$path."\">\n";
             }
             else{
-                $imgurl = $svgpath2.$value;
+                echo "<a href = \"index.php?url=".$svgpath2.$value."\">\n";
             }
-            echo $imgurl;
-            
-
-            echo "\" style = \"width:";
-            echo $currentjson->plotparams->plotwidth;
-            echo "px;position:relative;left:1px;top:1px;\"/>";
-            echo "<img style = \"position:absolute;left:0px;top:0px;z-index:0;\" src = \"".$svgpath2.$value."\"/>";
-            echo "\n</a></p>\n";
-            
-            echo "\n<div class = \"equation\">\n";
-            $topcode = explode("</equation>",$svgcode)[0];
-            $outcode = explode("<equation>",$topcode)[1];
-            echo $outcode;
-            echo "</div>";
-            
+            echo "<img src = \"".$svgpath2.$value."\"/>";
+            echo "\n</a>\n";
         }
     }
 ?>
@@ -109,58 +99,32 @@ LANGUAGE IS HOW THE MIND PARSES REALITY
     path = document.getElementById("pathdiv").innerHTML;
     if(path.length>1){
         document.getElementById("indexlink").href = "index.php?path=" + path;
-        document.getElementById("editorlink").href = "equationeditor.php?path=" + path;
     }
 </script>
 <style>
 
-#editorlink{
-    left:1em;
-    top:1em;
+#linktable{
     position:absolute;
+    top:0px;
+    left:0px;
     z-index:3;
-
 }
-#indexlink{
-    left:1em;
-    top:3em;
-position:absolute;
-    z-index:3;
-
-    
+#linktable img{
+    width:50px;
 }
-
 #scroll{
     position:absolute;
     left:0px;
-    top:0px;
+    top:110px;
     bottom:0px;
     right:0px;
     overflow:scroll;
 }
+#scroll img{
+    display:block;
+    margin:auto;
+}
     
-    img{
-        box-sizing: border-box;
-        border:solid;
-    }
-    p{
-        border:solid;
-        box-sizing: border-box;
-    }
-    .equation{
-        border:none;
-        width:50%;
-        margin:auto;
-        display:block;
-        overflow:scroll;
-        height:4em;
-    }
-    .equation p{
-        border:none;
-    }
-    .equation:hover{
-        height:10em;
-    }
 </style>
 </body>
 </html>
