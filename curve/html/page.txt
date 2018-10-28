@@ -7,10 +7,10 @@
         <td class = "button" id = "functionmodebutton"><img src = "icons/ab.svg"></td>
         <td class = "button" id = "plotmodebutton"><img src = "icons/plot.svg"></td>
         <td class = "button" id = "stylemodebutton"><img src = "icons/style.svg"></td>
-        <td><a href = "tree.php"><img src = "../symbol/icons/tree.svg"></a></td>
-        <td><a id = "svglink" href = "svgfeed.php"><img src = "../symbol/icons/svgfeed.svg"></a></td>
-        <td><a id = "markdownlink" href = "markdownfeed.php"><img src = "../symbols/markdown.svg"></a></td>
-        <td><a href = "../"><img src = "../symbol/icons/factory.svg"></a></td>
+        <td><a href = "tree.php"><img src = "icons/tree.svg"></a></td>
+        <td><a id = "svglink" href = "svgfeed.php"><img src = "icons/svgfeed.svg"></a></td>
+        <td><a id = "markdownlink" href = "markdownfeed.php"><img src = "icons/markdown.svg"></a></td>
+        <td><a href = "../"><img src = "icons/factory.svg"></a></td>
         <td><a id = "funclink" href = "functioneditor.php"><img src = "icons/function.svg"></a></td>
         <td class = "button" id = "savebutton"><img src = "icons/file.svg"></td>
     </tr>
