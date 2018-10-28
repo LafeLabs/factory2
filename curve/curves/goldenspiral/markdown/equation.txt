@@ -1,0 +1,18 @@
+# Equations
+
+$x$, $x_0$, $y$ and $y_0$ are all in pixels. x varies from 0 to the width in pixels of the plot.  Y and X are in the units of the system being studied.   When T scales by $1/4$ it is a quarter turn, which should be a ratio of $\phi$ less where $\phi$ is the Golden Ratio $(\sqrt{5} + 1)/2$.  So 
+
+$$
+\frac{e^{-(T + 1/4)/\tau}}{e^{-T/\tau}} = \phi = e^{-1/4\tau}
+$$
+$$
+\ln{(\phi)} = -\frac{1}{4\tau}
+$$
+$$
+\tau = -\frac{1}{4\ln{\phi}}
+$$
+
+
+$$X = g(x - x_0)$$
+$$(X,Y) = \left(e^{-T/A}\cos{\left(\frac{T}{2\pi}\right)},e^{-T/A}\sin{\left(\frac{T}{2\pi}\right)}\right)$$
+$$y = y_0 - GY$$ 

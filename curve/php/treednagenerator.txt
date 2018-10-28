@@ -2,10 +2,10 @@
 
 $finalstring = "[\n";
 
-$basefiles = scandir(getcwd());
+$basefiles = scandir(getcwd()."/curves");
 
 foreach($basefiles as $value){
-    if($value != "javascript" && $value != "css" && $value != "bytecode" && $value != "html" && $value != "svg" && $value != "memes" && $value != "json" && $value != "php" && $value != "." && $value != ".." && is_dir($value)){
+    if($value != "." && $value != ".."){
                 $finalstring .= "\"".$value."\",";
     }
 }
