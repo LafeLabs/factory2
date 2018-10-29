@@ -58,37 +58,37 @@
     
     
     inputs[0].onchange = function(){
-        currentjson.plotparams.x0 = this.value;
+        currentjson.plotparams.x0 = parseInt(this.value);
         redraw();
     }
     inputs[1].onchange = function(){
-        currentjson.plotparams.y0 = this.value;
+        currentjson.plotparams.y0 = parseInt(this.value);
         redraw();
     }
     inputs[2].onchange = function(){
-        currentjson.plotparams.g = this.value;
+        currentjson.plotparams.g = parseFloat(this.value);
         g0 = this.value;
         redraw();
     }
     inputs[3].onchange = function(){
-        currentjson.plotparams.G = this.value;
+        currentjson.plotparams.G = parseFloat(this.value);
         G0 = this.value;
         redraw();
     }
     imageinputs[0].onchange = function(){
-        currentjson.image.xoverw = this.value;
+        currentjson.image.xoverw = parseFloat(this.value);
         redraw();
     }
     imageinputs[1].onchange = function(){
-        currentjson.image.yoverw = this.value;
+        currentjson.image.yoverw = parseFloat(this.value);
         redraw();
     }
     imageinputs[2].onchange = function(){
-        currentjson.image.woverw = this.value;
+        currentjson.image.woverw = parseFloat(this.value);
         redraw();
     }
     imageinputs[3].onchange = function(){
-        currentjson.image.angle = this.value;
+        currentjson.image.angle = parseFloat(this.value);
         redraw();
     }
     imageinputs[4].onchange = function(){
@@ -98,13 +98,13 @@
     }
     
     functioninputs[0].onchange = function(){
-        A = this.value;
+        A = parseFloat(this.value);
         A0=A;
         
         redraw();
     }
     functioninputs[1].onchange = function(){
-        B = this.value;
+        B = parseFloat(this.value);
         B0=B;
         redraw();
     }

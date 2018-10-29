@@ -1,19 +1,19 @@
 {
     "constants": {},
-    "YofXstring": "Y = Math.tanh(X)",
+    "YofXstring": "Y =  (1/Math.PI)*0.5/(X*X + 0.25);",
     "style": {
         "linewidth": 4,
-        "color": "red",
+        "color": "blue",
         "fill": "none"
     },
     "plotparams": {
-        "G": 130.4659184724974,
-        "g": 0.03523085806037575,
+        "G": 244.0208303410385,
+        "g": 0.03990403272513649,
         "duration": 450.78888054094654,
         "plotwidth": 500,
         "plotheight": 500,
-        "x0": 250,
-        "y0": 238
+        "x0": 0,
+        "y0": 255
     },
     "funcparams": {},
     "image": {
@@ -23,6 +23,6 @@
         "woverw": 0.8536631795472632,
         "angle": "0"
     },
-    "A": 1,
+    "A": 13.676183278839833,
     "B": 1
 }
