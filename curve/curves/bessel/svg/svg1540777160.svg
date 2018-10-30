@@ -127,7 +127,7 @@ function BesselJ(n,x){
 		jsum=0;
 		bjp=ans=sum=0.0;
 		bj=1.0;
-		for (j=m;j > 0; j = j-1 ) {
+		for (j=m;j > 0; j-- ) {
 			bjm=j*tox*bj-bjp;
 			bjp=bj;
 			bj=bjm;

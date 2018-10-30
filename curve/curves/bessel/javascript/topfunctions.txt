@@ -106,7 +106,7 @@ function BesselJ(n,x){
 		tox = 2.0/ax;
 		bjm=BesselJ0(ax);
 		bj=BesselJ1(ax);
-		for (j=1;j<n;j++) {
+		for (j = 1; j < n ;j++ ) {
 			bjp=j*tox*bj-bjm;
 			bjm=bj;
 			bj=bjp;
@@ -121,7 +121,7 @@ function BesselJ(n,x){
 		jsum=0;
 		bjp=ans=sum=0.0;
 		bj=1.0;
-		for (j=m;j>0;j--) {
+		for (j=m;j > 0; j = j-1 ) {
 			bjm=j*tox*bj-bjp;
 			bjp=bj;
 			bj=bjm;
