@@ -61,6 +61,7 @@
 </ul>
 
  </div>
+
  <div class = "sidefeed" id = "rightfeed">
 <h2>How to make your own Watershed Factory</h2>
 
